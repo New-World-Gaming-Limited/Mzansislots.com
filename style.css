@@ -505,8 +505,7 @@
   border-radius: var(--radius-md);
   object-fit: contain;
   flex-shrink: 0;
-  background: #fff;
-  padding: 4px;
+  padding: 6px;
 }
 
 .casino-name {
