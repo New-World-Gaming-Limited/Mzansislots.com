@@ -1,0 +1,617 @@
+[
+  {
+    "name": "Shining Crown",
+    "provider": "Amusnet",
+    "slug": "shining-crown"
+  },
+  {
+    "name": "5 Dazzling Hot",
+    "provider": "Amusnet",
+    "slug": "5-dazzling-hot"
+  },
+  {
+    "name": "100 Super Hot",
+    "provider": "Amusnet",
+    "slug": "100-super-hot"
+  },
+  {
+    "name": "40 Lucky King",
+    "provider": "Amusnet",
+    "slug": "40-lucky-king"
+  },
+  {
+    "name": "20 Dazzling Hot",
+    "provider": "Amusnet",
+    "slug": "20-dazzling-hot"
+  },
+  {
+    "name": "40 Super Hot",
+    "provider": "Amusnet",
+    "slug": "40-super-hot"
+  },
+  {
+    "name": "10 Burning Heart",
+    "provider": "Amusnet",
+    "slug": "10-burning-heart"
+  },
+  {
+    "name": "20 Super Hot",
+    "provider": "Amusnet",
+    "slug": "20-super-hot"
+  },
+  {
+    "name": "40 Mega Clover",
+    "provider": "Amusnet",
+    "slug": "40-mega-clover"
+  },
+  {
+    "name": "5 Burning Heart",
+    "provider": "Amusnet",
+    "slug": "5-burning-heart"
+  },
+  {
+    "name": "Flaming Hot Extreme",
+    "provider": "Amusnet",
+    "slug": "flaming-hot-extreme"
+  },
+  {
+    "name": "20 Golden Coins",
+    "provider": "Amusnet",
+    "slug": "20-golden-coins"
+  },
+  {
+    "name": "Flaming Hot 6 Reels",
+    "provider": "Amusnet",
+    "slug": "flaming-hot-6-reels"
+  },
+  {
+    "name": "Burning Hot 6 Reels",
+    "provider": "Amusnet",
+    "slug": "burning-hot-6-reels"
+  },
+  {
+    "name": "Fruits & Gold",
+    "provider": "Amusnet",
+    "slug": "fruits-gold"
+  },
+  {
+    "name": "Aviatrix",
+    "provider": "Aviatrix",
+    "slug": "aviatrix"
+  },
+  {
+    "name": "Coins of Dragon",
+    "provider": "Betsoft",
+    "slug": "coins-of-dragon"
+  },
+  {
+    "name": "Pho Sho",
+    "provider": "Betsoft",
+    "slug": "pho-sho"
+  },
+  {
+    "name": "3 Pots of Olympus",
+    "provider": "Betsoft",
+    "slug": "3-pots-of-olympus"
+  },
+  {
+    "name": "Coins of Ra Deluxe",
+    "provider": "Betsoft",
+    "slug": "coins-of-ra-deluxe"
+  },
+  {
+    "name": "Coins of Alkemor: Extreme Magic",
+    "provider": "Betsoft",
+    "slug": "coins-of-alkemor-extreme-magic"
+  },
+  {
+    "name": "Bonanza Billion",
+    "provider": "BGaming",
+    "slug": "bonanza-billion"
+  },
+  {
+    "name": "Lady Wolf Moon Megaways",
+    "provider": "BGaming",
+    "slug": "lady-wolf-moon-megaways"
+  },
+  {
+    "name": "Snoop Dogg Dollars",
+    "provider": "BGaming",
+    "slug": "snoop-dogg-dollars"
+  },
+  {
+    "name": "Magic Mummy Megaways",
+    "provider": "BGaming",
+    "slug": "magic-mummy-megaways"
+  },
+  {
+    "name": "Elvis Frog Trueways",
+    "provider": "BGaming",
+    "slug": "elvis-frog-trueways"
+  },
+  {
+    "name": "Gold Rush with Johnny Cash",
+    "provider": "BGaming",
+    "slug": "gold-rush-with-johnny-cash"
+  },
+  {
+    "name": "Aviamasters",
+    "provider": "BGaming",
+    "slug": "aviamasters"
+  },
+  {
+    "name": "Lady Wolf Moon",
+    "provider": "BGaming",
+    "slug": "lady-wolf-moon"
+  },
+  {
+    "name": "Recycle Riches",
+    "provider": "BGaming",
+    "slug": "recycle-riches"
+  },
+  {
+    "name": "Elvis Frog In Vegas",
+    "provider": "BGaming",
+    "slug": "elvis-frog-in-vegas"
+  },
+  {
+    "name": "Hot Chilli Bells",
+    "provider": "BGaming",
+    "slug": "hot-chilli-bells"
+  },
+  {
+    "name": "Bonanza Trillion",
+    "provider": "BGaming",
+    "slug": "bonanza-trillion"
+  },
+  {
+    "name": "Buffalo Hold and Win",
+    "provider": "Booming Games",
+    "slug": "buffalo-hold-and-win"
+  },
+  {
+    "name": "Lucky Charms Trio",
+    "provider": "Booming Games",
+    "slug": "lucky-charms-trio"
+  },
+  {
+    "name": "Gold Gold Gold",
+    "provider": "Booming Games",
+    "slug": "gold-gold-gold"
+  },
+  {
+    "name": "Trollfufu Bonanza",
+    "provider": "Booming Games",
+    "slug": "trollfufu-bonanza"
+  },
+  {
+    "name": "Hell Hot 100",
+    "provider": "Endorphina",
+    "slug": "hell-hot-100"
+  },
+  {
+    "name": "Gambleman",
+    "provider": "Endorphina",
+    "slug": "gambleman"
+  },
+  {
+    "name": "Lucky Streak 3",
+    "provider": "Endorphina",
+    "slug": "lucky-streak-3"
+  },
+  {
+    "name": "Joker Stoker",
+    "provider": "Endorphina",
+    "slug": "joker-stoker"
+  },
+  {
+    "name": "Crown Coins",
+    "provider": "Endorphina",
+    "slug": "crown-coins"
+  },
+  {
+    "name": "Book Of Santa",
+    "provider": "Endorphina",
+    "slug": "book-of-santa"
+  },
+  {
+    "name": "Ultra Fresh",
+    "provider": "Endorphina",
+    "slug": "ultra-fresh"
+  },
+  {
+    "name": "2026 Hit Slot",
+    "provider": "Endorphina",
+    "slug": "2026-hit-slot"
+  },
+  {
+    "name": "3 Thunders",
+    "provider": "Endorphina",
+    "slug": "3-thunders"
+  },
+  {
+    "name": "7 Bonus Up!",
+    "provider": "Endorphina",
+    "slug": "7-bonus-up"
+  },
+  {
+    "name": "Wanted Dead or a Wild",
+    "provider": "Hacksaw Gaming",
+    "slug": "wanted-dead-or-a-wild"
+  },
+  {
+    "name": "Eternal Duel",
+    "provider": "Hacksaw Gaming",
+    "slug": "eternal-duel"
+  },
+  {
+    "name": "Le Fisherman",
+    "provider": "Hacksaw Gaming",
+    "slug": "le-fisherman"
+  },
+  {
+    "name": "Dusk Princess",
+    "provider": "Hacksaw Gaming",
+    "slug": "dusk-princess"
+  },
+  {
+    "name": "Le Bandit",
+    "provider": "Hacksaw Gaming",
+    "slug": "le-bandit"
+  },
+  {
+    "name": "Dark Spiral",
+    "provider": "Hacksaw Gaming",
+    "slug": "dark-spiral"
+  },
+  {
+    "name": "RIP City",
+    "provider": "Hacksaw Gaming",
+    "slug": "rip-city"
+  },
+  {
+    "name": "Duel at Dawn",
+    "provider": "Hacksaw Gaming",
+    "slug": "duel-at-dawn"
+  },
+  {
+    "name": "Le Pharaoh",
+    "provider": "Hacksaw Gaming",
+    "slug": "le-pharaoh"
+  },
+  {
+    "name": "Hot Ross",
+    "provider": "Hacksaw Gaming",
+    "slug": "hot-ross"
+  },
+  {
+    "name": "Book of Dead",
+    "provider": "Play'n GO",
+    "slug": "book-of-dead"
+  },
+  {
+    "name": "Fire Joker",
+    "provider": "Play'n GO",
+    "slug": "fire-joker"
+  },
+  {
+    "name": "Legacy of Dead",
+    "provider": "Play'n GO",
+    "slug": "legacy-of-dead"
+  },
+  {
+    "name": "Rise of Olympus 100",
+    "provider": "Play'n GO",
+    "slug": "rise-of-olympus-100"
+  },
+  {
+    "name": "Rise of Merlin",
+    "provider": "Play'n GO",
+    "slug": "rise-of-merlin"
+  },
+  {
+    "name": "Moon Princess 100",
+    "provider": "Play'n GO",
+    "slug": "moon-princess-100"
+  },
+  {
+    "name": "Gates of Olympus 1000",
+    "provider": "Pragmatic Play",
+    "slug": "gates-of-olympus-1000"
+  },
+  {
+    "name": "Gates of Olympus",
+    "provider": "Pragmatic Play",
+    "slug": "gates-of-olympus"
+  },
+  {
+    "name": "Sugar Rush",
+    "provider": "Pragmatic Play",
+    "slug": "sugar-rush"
+  },
+  {
+    "name": "Buffalo King Megaways",
+    "provider": "Pragmatic Play",
+    "slug": "buffalo-king-megaways"
+  },
+  {
+    "name": "Gates of Olympus Super Scatter",
+    "provider": "Pragmatic Play",
+    "slug": "gates-of-olympus-super-scatter"
+  },
+  {
+    "name": "The Dog House Megaways",
+    "provider": "Pragmatic Play",
+    "slug": "the-dog-house-megaways"
+  },
+  {
+    "name": "5 Lions Megaways",
+    "provider": "Pragmatic Play",
+    "slug": "5-lions-megaways"
+  },
+  {
+    "name": "Sweet Bonanza",
+    "provider": "Pragmatic Play",
+    "slug": "sweet-bonanza"
+  },
+  {
+    "name": "Sugar Rush 1000",
+    "provider": "Pragmatic Play",
+    "slug": "sugar-rush-1000"
+  },
+  {
+    "name": "Sweet Bonanza 1000",
+    "provider": "Pragmatic Play",
+    "slug": "sweet-bonanza-1000"
+  },
+  {
+    "name": "Madame Destiny Megaways",
+    "provider": "Pragmatic Play",
+    "slug": "madame-destiny-megaways"
+  },
+  {
+    "name": "Wolf Gold",
+    "provider": "Pragmatic Play",
+    "slug": "wolf-gold"
+  },
+  {
+    "name": "Great Rhino Megaways",
+    "provider": "Pragmatic Play",
+    "slug": "great-rhino-megaways"
+  },
+  {
+    "name": "Wild Wild Riches",
+    "provider": "Pragmatic Play",
+    "slug": "wild-wild-riches"
+  },
+  {
+    "name": "Book of the Fallen",
+    "provider": "Pragmatic Play",
+    "slug": "book-of-the-fallen"
+  },
+  {
+    "name": "Hot to Burn Hold & Spin",
+    "provider": "Pragmatic Play",
+    "slug": "hot-to-burn-hold-spin"
+  },
+  {
+    "name": "Sweet Bonanza Super Scatter",
+    "provider": "Pragmatic Play",
+    "slug": "sweet-bonanza-super-scatter"
+  },
+  {
+    "name": "Fruit Party",
+    "provider": "Pragmatic Play",
+    "slug": "fruit-party"
+  },
+  {
+    "name": "Joker's Jewels",
+    "provider": "Pragmatic Play",
+    "slug": "joker-s-jewels"
+  },
+  {
+    "name": "Spaceman",
+    "provider": "Pragmatic Play",
+    "slug": "spaceman"
+  },
+  {
+    "name": "The Dog House",
+    "provider": "Pragmatic Play",
+    "slug": "the-dog-house"
+  },
+  {
+    "name": "Wild West Gold",
+    "provider": "Pragmatic Play",
+    "slug": "wild-west-gold"
+  },
+  {
+    "name": "Big Bass Crash",
+    "provider": "Pragmatic Play",
+    "slug": "big-bass-crash"
+  },
+  {
+    "name": "Mustang Gold",
+    "provider": "Pragmatic Play",
+    "slug": "mustang-gold"
+  },
+  {
+    "name": "Starlight Princess",
+    "provider": "Pragmatic Play",
+    "slug": "starlight-princess"
+  },
+  {
+    "name": "Starlight Princess 1000",
+    "provider": "Pragmatic Play",
+    "slug": "starlight-princess-1000"
+  },
+  {
+    "name": "Fire Strike",
+    "provider": "Pragmatic Play",
+    "slug": "fire-strike"
+  },
+  {
+    "name": "Gems Bonanza",
+    "provider": "Pragmatic Play",
+    "slug": "gems-bonanza"
+  },
+  {
+    "name": "Lucky Tiger",
+    "provider": "Pragmatic Play",
+    "slug": "lucky-tiger"
+  },
+  {
+    "name": "Sweet Bonanza Xmas",
+    "provider": "Pragmatic Play",
+    "slug": "sweet-bonanza-xmas"
+  },
+  {
+    "name": "Zeus vs Hades Gods of War",
+    "provider": "Pragmatic Play",
+    "slug": "zeus-vs-hades-gods-of-war"
+  },
+  {
+    "name": "Bigger Bass Bonanza",
+    "provider": "Pragmatic Play",
+    "slug": "bigger-bass-bonanza"
+  },
+  {
+    "name": "Buffalo King",
+    "provider": "Pragmatic Play",
+    "slug": "buffalo-king"
+  },
+  {
+    "name": "Clover Gold",
+    "provider": "Pragmatic Play",
+    "slug": "clover-gold"
+  },
+  {
+    "name": "Diamond Strike",
+    "provider": "Pragmatic Play",
+    "slug": "diamond-strike"
+  },
+  {
+    "name": "Big Bass Bonanza 1000",
+    "provider": "Pragmatic Play",
+    "slug": "big-bass-bonanza-1000"
+  },
+  {
+    "name": "777 Strike",
+    "provider": "Red Tiger Gaming",
+    "slug": "777-strike"
+  },
+  {
+    "name": "Gonzo's Quest Megaways",
+    "provider": "Red Tiger Gaming",
+    "slug": "gonzo-s-quest-megaways"
+  },
+  {
+    "name": "Dragon's Luck",
+    "provider": "Red Tiger Gaming",
+    "slug": "dragon-s-luck"
+  },
+  {
+    "name": "Majestic King",
+    "provider": "Spinomenal",
+    "slug": "majestic-king"
+  },
+  {
+    "name": "Book Of Demi Gods II",
+    "provider": "Spinomenal",
+    "slug": "book-of-demi-gods-ii"
+  },
+  {
+    "name": "Book Of Irish Treasures",
+    "provider": "Spinomenal",
+    "slug": "book-of-irish-treasures"
+  },
+  {
+    "name": "Book Of Rebirth",
+    "provider": "Spinomenal",
+    "slug": "book-of-rebirth"
+  },
+  {
+    "name": "Celtic Coins - Hold & Hit 3x3",
+    "provider": "Spinomenal",
+    "slug": "celtic-coins-hold-hit-3x3"
+  },
+  {
+    "name": "Majestic Leprechaun",
+    "provider": "Spinomenal",
+    "slug": "majestic-leprechaun"
+  },
+  {
+    "name": "Book Of Tribes",
+    "provider": "Spinomenal",
+    "slug": "book-of-tribes"
+  },
+  {
+    "name": "Book Of Demi Gods III",
+    "provider": "Spinomenal",
+    "slug": "book-of-demi-gods-iii"
+  },
+  {
+    "name": "Queen of the Irish",
+    "provider": "Spinomenal",
+    "slug": "queen-of-the-irish"
+  },
+  {
+    "name": "Book Of Clovers",
+    "provider": "Spinomenal",
+    "slug": "book-of-clovers"
+  },
+  {
+    "name": "Aviator",
+    "provider": "Spribe",
+    "slug": "aviator"
+  },
+  {
+    "name": "Mighty Wild: Gorilla",
+    "provider": "Wazdan",
+    "slug": "mighty-wild-gorilla"
+  },
+  {
+    "name": "Fisherman's Luck",
+    "provider": "Wazdan",
+    "slug": "fisherman-s-luck"
+  },
+  {
+    "name": "Cash Grotto",
+    "provider": "Wazdan",
+    "slug": "cash-grotto"
+  },
+  {
+    "name": "Hot 777",
+    "provider": "Wazdan",
+    "slug": "hot-777"
+  },
+  {
+    "name": "Mighty Wild: Panther",
+    "provider": "Wazdan",
+    "slug": "mighty-wild-panther"
+  },
+  {
+    "name": "9 Coins",
+    "provider": "Wazdan",
+    "slug": "9-coins"
+  },
+  {
+    "name": "36 Coins",
+    "provider": "Wazdan",
+    "slug": "36-coins"
+  },
+  {
+    "name": "Hot Slot Diamond Coins",
+    "provider": "Wazdan",
+    "slug": "hot-slot-diamond-coins"
+  },
+  {
+    "name": "Magic Fruits: Oranges",
+    "provider": "Wazdan",
+    "slug": "magic-fruits-oranges"
+  },
+  {
+    "name": "Mighty Fish: Blue Marlin",
+    "provider": "Wazdan",
+    "slug": "mighty-fish-blue-marlin"
+  }
+]
