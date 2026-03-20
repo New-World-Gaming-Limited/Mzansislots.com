@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════
-   MZANSI SLOTS — Design Tokens & Component Styles
+   MZANSI SLOTS - Design Tokens & Component Styles
    Blue & White Clean Casino Theme
    ═══════════════════════════════════════════════════════ */
 
@@ -44,7 +44,7 @@
   --content-wide: 1200px;
 }
 
-/* ── Light Mode (Blue & White — Refined) ── */
+/* ── Light Mode (Blue & White - Refined) ── */
 :root, [data-theme="light"] {
   --color-bg: #f5f7fa;
   --color-surface: #ffffff;
@@ -374,8 +374,8 @@
 }
 
 @keyframes reel-spin {
-  0%   { transform: translateY(0); }
-  100% { transform: translateY(-50%); }
+  0%   { transform: translateY(-50%); }
+  100% { transform: translateY(0); }
 }
 
 /* Fallback: keep old patterns/floats hidden */
@@ -1292,6 +1292,32 @@
   color: var(--color-primary);
 }
 
+/* ── Provider Cross-Links ── */
+.provider-crosslinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+a.provider-crosslink {
+  display: inline-block;
+  padding: var(--space-2) var(--space-4);
+  background: var(--color-primary-surface);
+  color: var(--color-text);
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+a.provider-crosslink:hover {
+  background: var(--color-primary);
+  color: #fff;
+}
+
 /* ── Closing CTA ── */
 .closing-cta {
   background: linear-gradient(135deg, var(--color-primary), #1e4976);
@@ -2060,7 +2086,7 @@ a.game-tag-link:active {
 }
 
 /* ═══════════════════════════════════════════════════════
-   MOBILE RESPONSIVE — max-width: 768px
+   MOBILE RESPONSIVE - max-width: 768px
    ═══════════════════════════════════════════════════════ */
 @media (max-width: 768px) {
 
@@ -2399,7 +2425,7 @@ a.game-tag-link:active {
 }
 
 /* ═══════════════════════════════════════════════════════
-   SMALL MOBILE — max-width: 420px
+   SMALL MOBILE - max-width: 420px
    ═══════════════════════════════════════════════════════ */
 @media (max-width: 420px) {
   .hero h1 {
@@ -2420,7 +2446,7 @@ a.game-tag-link:active {
 }
 
 /* ═══════════════════════════════════════════════════════
-   STICKY MOBILE CTA — Game Pages
+   STICKY MOBILE CTA - Game Pages
    ═══════════════════════════════════════════════════════ */
 .sticky-mobile-cta {
   display: none;
@@ -2575,7 +2601,7 @@ a.game-tag-link:active {
 }
 
 /* ═══════════════════════════════════════════════════════
-   RELATED GAMES — EXPANDED GRID
+   RELATED GAMES - EXPANDED GRID
    ═══════════════════════════════════════════════════════ */
 .related-games-grid {
   display: grid;
@@ -2633,7 +2659,7 @@ a.game-tag-link:active {
 }
 
 /* ═══════════════════════════════════════════════════════
-   SLOT GAMES DIRECTORY — Search, Filter, Browse
+   SLOT GAMES DIRECTORY - Search, Filter, Browse
    ═══════════════════════════════════════════════════════ */
 
 /* ── Hero ── */
@@ -3216,7 +3242,7 @@ a.game-tag-link:active {
 }
 
 /* ═══════════════════════════════════════════════════════
-   CROSS-LINKING SYSTEM — Game Pages
+   CROSS-LINKING SYSTEM - Game Pages
    ═══════════════════════════════════════════════════════ */
 .xlink-container {
   padding: var(--space-10) 0 var(--space-6);

@@ -1,4 +1,4 @@
-// MzansiSlots — Slot Games Directory App
+// MzansiSlots - Slot Games Directory App
 // Search, filter, and browse all games
 (function() {
   'use strict';
@@ -15,7 +15,7 @@
     view: 'grouped'
   };
 
-  // Theme mapping — which raw themes belong to each category
+  // Theme mapping - which raw themes belong to each category
   const THEME_MAP = {};
   Object.entries(THEME_CATEGORIES).forEach(([cat, themes]) => {
     themes.forEach(t => { THEME_MAP[t] = cat; });
@@ -52,7 +52,7 @@
       provContainer.appendChild(chip);
     });
 
-    // Themes — use categories
+    // Themes - use categories
     const themeContainer = document.getElementById('filter-themes');
     const themeCats = Object.keys(THEME_CATEGORIES);
     // Also add themes that appear but aren't categorized
@@ -140,7 +140,7 @@
         if (!state.filters.provider.includes(game.p)) return false;
       }
 
-      // Theme filter — check if game's theme belongs to any selected category
+      // Theme filter - check if game's theme belongs to any selected category
       if (state.filters.theme.length) {
         const gameCat = THEME_MAP[game.th] || '';
         if (!state.filters.theme.includes(gameCat)) return false;

@@ -1,24 +1,31 @@
 /*
   Hero Slot Machine Reels Background
-  Creates vertical spinning columns of 7s and stars,
+  Creates vertical spinning columns of classic slot symbols
+  (7s, BARs, cherries, bells, diamonds, stars)
   like an old-school slot machine running in the background.
+  Reels spin DOWNWARD.
 */
 (function() {
-  // SVG symbols — classic slot 7s and stars only
+  // SVG symbols - classic slot machine icons
   const symbols = {
     seven: (color) => `<text x="12" y="20" text-anchor="middle" font-family="'Arial Black','Impact',sans-serif" font-size="22" font-weight="900" fill="${color}">7</text>`,
     star: (color) => `<polygon points="12,2 14.9,8.6 22,9.6 17,14.8 18.2,22 12,18.5 5.8,22 7,14.8 2,9.6 9.1,8.6" fill="${color}"/>`,
+    cherry: (color) => `<g fill="${color}"><circle cx="8" cy="16" r="4.5"/><circle cx="16" cy="18" r="4.5"/><path d="M8 11.5 Q10 4 12 3 Q14 4 16 13.5" fill="none" stroke="${color}" stroke-width="1.5" stroke-linecap="round"/><ellipse cx="13" cy="3.5" rx="3" ry="1.8" fill="${color}" opacity="0.7"/></g>`,
+    bell: (color) => `<g fill="${color}"><path d="M12 2 C12 2 7 6 6 12 C5.5 14.5 5 16 5 17 L19 17 C19 16 18.5 14.5 18 12 C17 6 12 2 12 2Z"/><rect x="10" y="17" width="4" height="3" rx="1.5"/><circle cx="12" cy="2.5" r="1.2"/></g>`,
+    diamond: (color) => `<polygon points="12,2 22,12 12,22 2,12" fill="${color}"/>`,
+    bar: (color) => `<g><rect x="2" y="7" width="20" height="10" rx="2" fill="${color}"/><text x="12" y="15.5" text-anchor="middle" font-family="'Arial Black','Impact',sans-serif" font-size="7" font-weight="900" fill="rgba(15,23,42,0.6)">BAR</text></g>`,
     sevenOutline: (color) => `<text x="12" y="20" text-anchor="middle" font-family="'Arial Black','Impact',sans-serif" font-size="22" font-weight="900" fill="none" stroke="${color}" stroke-width="0.8">7</text>`,
-    starOutline: (color) => `<polygon points="12,2 14.9,8.6 22,9.6 17,14.8 18.2,22 12,18.5 5.8,22 7,14.8 2,9.6 9.1,8.6" fill="none" stroke="${color}" stroke-width="0.8"/>`,
+    diamondOutline: (color) => `<polygon points="12,2 22,12 12,22 2,12" fill="none" stroke="${color}" stroke-width="1"/>`,
   };
 
-  // Colors for the symbols — subtle gold, white, cyan tones
+  // Colors for the symbols - subtle gold, white, cyan tones
   const colors = [
     'rgba(255,215,0,0.25)',   // gold
     'rgba(255,255,255,0.18)', // white
     'rgba(125,249,255,0.15)', // cyan
     'rgba(255,215,0,0.12)',   // dimmer gold
     'rgba(255,255,255,0.10)', // dimmer white
+    'rgba(234,88,12,0.15)',   // orange tint
   ];
 
   // Create one reel column SVG strip
@@ -29,7 +36,7 @@
     let s = seed;
     function rng() { s = (s * 16807) % 2147483647; return (s - 1) / 2147483646; }
 
-    const types = ['seven', 'star', 'sevenOutline', 'starOutline'];
+    const types = ['seven', 'cherry', 'bell', 'diamond', 'bar', 'star', 'sevenOutline', 'diamondOutline'];
 
     for (let i = 0; i < numSymbols; i++) {
       const type = types[Math.floor(rng() * types.length)];

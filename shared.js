@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════
-   MZANSI SLOTS — Shared JavaScript
+   MZANSI SLOTS - Shared JavaScript
    ═══════════════════════════════════════════════════════ */
 
 // Theme toggle
