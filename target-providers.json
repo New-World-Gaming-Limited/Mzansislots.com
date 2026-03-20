@@ -1,0 +1,80 @@
+{
+  "Amusnet": {
+    "id": 14,
+    "name": "Amusnet",
+    "slug": "amusnet",
+    "thumb": "https://assets.slotslaunch.com/28032/amusnet-interactive.png"
+  },
+  "Aviatrix": {
+    "id": 400,
+    "name": "Aviatrix",
+    "slug": "aviatrix",
+    "thumb": "https://assets.slotslaunch.com/13511/aviatrix.png"
+  },
+  "Betsoft": {
+    "id": 33,
+    "name": "Betsoft",
+    "slug": "betsoft",
+    "thumb": "https://assets.slotslaunch.com/12439/Betsoft-LOGO_on-bright.png"
+  },
+  "BGaming": {
+    "id": 35,
+    "name": "BGaming",
+    "slug": "bgaming",
+    "thumb": "https://assets.slotslaunch.com/9114/Frame-2.png"
+  },
+  "Booming Games": {
+    "id": 41,
+    "name": "Booming Games",
+    "slug": "booming-games",
+    "thumb": "https://assets.slotslaunch.com/120/booming-games.png"
+  },
+  "Endorphina": {
+    "id": 59,
+    "name": "Endorphina",
+    "slug": "endorphina",
+    "thumb": "https://assets.slotslaunch.com/7318/Screenshot-2023-02-15-at-4.13.13-PM.png"
+  },
+  "Hacksaw Gaming": {
+    "id": 97,
+    "name": "Hacksaw Gaming",
+    "slug": "hacksaw-gaming",
+    "thumb": "https://assets.slotslaunch.com/106737/hacksaw-gaming.jpg"
+  },
+  "Play'n GO": {
+    "id": 153,
+    "name": "Play'n GO",
+    "slug": "play-n-go",
+    "thumb": "https://assets.slotslaunch.com/106742/play-n-go.jpg"
+  },
+  "Pragmatic Play": {
+    "id": 161,
+    "name": "Pragmatic Play",
+    "slug": "pragmatic-play",
+    "thumb": "https://assets.slotslaunch.com/15981/pragmatic-play.png"
+  },
+  "Red Tiger": {
+    "id": 173,
+    "name": "Red Tiger Gaming",
+    "slug": "red-tiger-gaming",
+    "thumb": "https://assets.slotslaunch.com/497/red-tiger-gaming.png"
+  },
+  "Spinomenal": {
+    "id": 202,
+    "name": "Spinomenal",
+    "slug": "spinomenal",
+    "thumb": "https://assets.slotslaunch.com/528/spinomenal.png"
+  },
+  "Spribe": {
+    "id": 418,
+    "name": "Spribe",
+    "slug": "spribe",
+    "thumb": "https://assets.slotslaunch.com/15069/spribe.png"
+  },
+  "Wazdan": {
+    "id": 220,
+    "name": "Wazdan",
+    "slug": "wazdan",
+    "thumb": "https://assets.slotslaunch.com/549/wazdan.png"
+  }
+}

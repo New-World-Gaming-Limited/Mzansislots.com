@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <style>
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #1a1a1a; }
+      .letter-m { fill: #ffffff; }
+    }
+  </style>
+  <rect class="bg" width="32" height="32" rx="4" fill="#ffffff"/>
+  <text class="letter-m" x="16" y="17" text-anchor="middle" dominant-baseline="auto" font-family="Arial Black, Impact, sans-serif" font-weight="900" font-size="20" fill="#1a1a1a">M</text>
+  <text x="16" y="30.5" text-anchor="middle" dominant-baseline="auto" font-family="Arial Black, Impact, sans-serif" font-weight="900" font-size="17" fill="#2956B2">S</text>
+</svg>

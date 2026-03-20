@@ -1768,6 +1768,26 @@ a.game-tag-link:active {
 }
 .tag-megaways { background: #6366f1; color: white; }
 .tag-bonus { background: #f59e0b; color: #111827; }
+.tag-volatility { background: #ef4444; color: white; }
+.tag-rtp { background: #10b981; color: white; }
+
+.provider-logo-inline {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  border-radius: 4px;
+  vertical-align: middle;
+  margin-right: 4px;
+}
+
+.provider-hub-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: 8px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
 .tag-jackpot { background: #ef4444; color: white; }
 .tag-provider-label { background: rgba(255,255,255,0.1); color: var(--color-text-muted); border: 1px solid var(--color-border); }
 
