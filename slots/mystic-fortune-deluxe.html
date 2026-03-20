@@ -141,17 +141,22 @@
 </section>
 
 <!-- ═══ PLAY CTA (no demo — Spina Zonke games) ═══ -->
+<!-- ═══ DEMO IFRAME ═══ -->
 <section class="game-demo-section">
   <div class="container">
     <div class="game-demo-wrapper">
-      <div class="game-demo-frame" style="display:flex;align-items:center;justify-content:center;text-align:center;">
-        <div class="spina-zonke-cta">
-          <div style="font-size:5rem;margin-bottom:var(--space-4);">🔮</div>
-          <h2 style="font-family:var(--font-display);font-size:var(--text-2xl);margin-bottom:var(--space-3);">Play Mystic Fortune Deluxe at Hollywoodbets</h2>
-          <p style="color:var(--color-text-muted);margin-bottom:var(--space-6);max-width:480px;margin-left:auto;margin-right:auto;">Mystic Fortune Deluxe is available on the Spina Zonke platform. Sign up at Hollywoodbets to play for real money with your welcome bonus.</p>
-          <a href="https://www.hollywoodbets.net" class="btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer">Play at Hollywoodbets →</a>
-          <p style="color:var(--color-text-faint);font-size:var(--text-xs);margin-top:var(--space-3);">18+ | T&Cs Apply | Play Responsibly</p>
+      <div class="game-demo-frame" id="demoFrame">
+        <div class="demo-placeholder" id="demoPlaceholder">
+          <img src="https://assets.slotslaunch.com/13743/mystic-fortune-deluxe.jpg" alt="Mystic Fortune Deluxe" class="demo-placeholder-img" loading="eager">
+          <div class="demo-overlay">
+            <button class="demo-play-btn" id="launchDemo" aria-label="Launch Mystic Fortune Deluxe demo">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              <span>Play Free Demo</span>
+            </button>
+            <p class="demo-note">Free play — no registration required</p>
+          </div>
         </div>
+        <iframe id="gameIframe" style="display:none;" width="100%" height="100%" src="" frameborder="0" allowfullscreen allow="autoplay; fullscreen"></iframe>
       </div>
     </div>
   </div>
@@ -192,7 +197,7 @@
                 ✔ ZAR Deposits<br>✔ SA Licensed<br>✔ Best Bonus
               </td>
               <td>
-                <a href="https://www.mzansiwins.co.za/link/96a5aad0181116205024/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">GET OFFER</a>
+                <a href="https://www.mzansiwins.co.za/link/96a5aad0181116205024/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-table">GET OFFER</a>
               </td>
             </tr>
             <tr>
@@ -213,7 +218,7 @@
                 ✔ ZAR Deposits<br>✔ SA Licensed<br>✔ Mobile App
               </td>
               <td>
-                <a href="https://www.mzansiwins.co.za/link/9b577ef9230623171008/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">GET OFFER</a>
+                <a href="https://www.mzansiwins.co.za/link/9b577ef9230623171008/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-table">GET OFFER</a>
               </td>
             </tr>
             <tr>
@@ -233,7 +238,7 @@
                 ✔ ZAR Deposits<br>✔ SA Licensed<br>✔ Mobile App
               </td>
               <td>
-                <a href="https://www.mzansiwins.co.za/link/9947adce190222182544/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">GET OFFER</a>
+                <a href="https://www.mzansiwins.co.za/link/9947adce190222182544/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-table">GET OFFER</a>
               </td>
             </tr>
             <tr>
@@ -252,7 +257,7 @@
                 ✔ ZAR Deposits<br>✔ SA Licensed<br>✔ Mobile App
               </td>
               <td>
-                <a href="#" class="btn btn-primary btn-sm">GET OFFER</a>
+                <a href="#" class="btn btn-primary btn-table">GET OFFER</a>
               </td>
             </tr>
             <tr>
@@ -272,7 +277,7 @@
                 ✔ ZAR Deposits<br>✔ SA Licensed<br>✔ Mobile App
               </td>
               <td>
-                <a href="https://www.mzansiwins.co.za/link/d396cd75251113093940/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">GET OFFER</a>
+                <a href="https://www.mzansiwins.co.za/link/d396cd75251113093940/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-table">GET OFFER</a>
               </td>
             </tr>
           </tbody>
@@ -331,34 +336,139 @@
         </ol>
       </div>
     </div>
+  </div>
+</section>
 
-    <!-- Related Games -->
-    <div class="related-games-section">
-      <h2>More Spina Zonke Slots</h2>
-      <div class="related-games-grid">
-            <a href="hot-hot-fruit.html" class="related-game-card">
-              <div class="related-game-emoji" style="background: linear-gradient(135deg, var(--color-primary), var(--color-accent)); display:flex;align-items:center;justify-content:center;font-size:2.5rem;border-radius:var(--radius-md);aspect-ratio:4/3;">🍒</div>
-              <div class="related-game-info">
-                <div class="related-game-name">Hot Hot Fruit</div>
-                <div class="related-game-rtp">96.70% RTP</div>
+<!-- ═══ CROSS-LINKS ═══ -->
+<section class="xlink-container">
+  <div class="container">
+    <div class="xlink-section">
+        <div class="xlink-section-header">
+          <h3><img src="../assets/providers/greentube.png" alt="Habanero" class="xlink-section-logo">More from Habanero</h3>
+          <a href="../habanero.html" class="xlink-see-all">View all Habanero slots &rarr;</a>
+        </div>
+        <div class="xlink-grid">
+            <a href="hot-hot-fruit.html" class="xlink-card">
+              <img src="https://assets.slotslaunch.com/13711/hot-hot-fruit.jpg" alt="Hot Hot Fruit" loading="lazy">
+              <div class="xlink-card-info">
+                <div class="xlink-card-name">Hot Hot Fruit</div>
+                <span class="xlink-card-rtp">96.70% RTP</span>
               </div>
             </a>
-            <a href="hot-to-burn.html" class="related-game-card">
-              <div class="related-game-emoji" style="background: linear-gradient(135deg, var(--color-primary), var(--color-accent)); display:flex;align-items:center;justify-content:center;font-size:2.5rem;border-radius:var(--radius-md);aspect-ratio:4/3;">🔥</div>
-              <div class="related-game-info">
-                <div class="related-game-name">Hot to Burn</div>
-                <div class="related-game-rtp">96.70% RTP</div>
+            <a href="strike-frenzy.html" class="xlink-card">
+              <img src="https://assets.slotslaunch.com/28245/strike-frenzy.jpg" alt="Strike Frenzy" loading="lazy">
+              <div class="xlink-card-info">
+                <div class="xlink-card-name">Strike Frenzy</div>
+                <span class="xlink-card-rtp">96.66% RTP</span>
               </div>
             </a>
-            <a href="strike-frenzy.html" class="related-game-card">
-              <div class="related-game-emoji" style="background: linear-gradient(135deg, var(--color-primary), var(--color-accent)); display:flex;align-items:center;justify-content:center;font-size:2.5rem;border-radius:var(--radius-md);aspect-ratio:4/3;">⚡</div>
-              <div class="related-game-info">
-                <div class="related-game-name">Strike Frenzy</div>
-                <div class="related-game-rtp">96.66% RTP</div>
+            <a href="wealth-inn.html" class="xlink-card">
+              <img src="https://assets.slotslaunch.com/13795/wealth-inn.jpg" alt="Wealth Inn" loading="lazy">
+              <div class="xlink-card-info">
+                <div class="xlink-card-name">Wealth Inn</div>
+                <span class="xlink-card-rtp">96.72% RTP</span>
               </div>
             </a>
+            <a href="hollywoodbets-sugartime.html" class="xlink-card">
+              <div class="xlink-card-placeholder"><span>HO</span></div>
+              <div class="xlink-card-info">
+                <div class="xlink-card-name">Hollywoodbets SugarTime</div>
+                <span class="xlink-card-rtp">96.68% RTP</span>
+              </div>
+            </a>
+            <a href="hot-hot-hollywoodbets.html" class="xlink-card">
+              <div class="xlink-card-placeholder"><span>HO</span></div>
+              <div class="xlink-card-info">
+                <div class="xlink-card-name">Hot Hot Hollywoodbets</div>
+                <span class="xlink-card-rtp">96.70% RTP</span>
+              </div>
+            </a>
+            <a href="diamond-rise.html" class="xlink-card">
+              <div class="xlink-card-placeholder"><span>DI</span></div>
+              <div class="xlink-card-info">
+                <div class="xlink-card-name">Diamond Rise</div>
+                <span class="xlink-card-rtp">96.64% RTP</span>
+              </div>
+            </a>
+        </div>
+      </div><div class="xlink-section">
+        <div class="xlink-section-header">
+          <h3>🌍 Similar Culture Slots</h3>
+          <a href="../slot-games.html" class="xlink-see-all">Browse all slots &rarr;</a>
+        </div>
+        <div class="xlink-grid">
+            <a href="5-lions-megaways.html" class="xlink-card">
+              <img src="https://assets.slotslaunch.com/2619/5-lions-megaways.jpg" alt="5 Lions Megaways" loading="lazy">
+              <div class="xlink-card-info">
+                <div class="xlink-card-name">5 Lions Megaways</div>
+                <span class="xlink-card-rtp">95.66% RTP</span>
+              </div>
+            </a>
+            <a href="5-lions-dance.html" class="xlink-card">
+              <img src="https://assets.slotslaunch.com/5564/5-lions-dance.jpg" alt="5 Lions Dance" loading="lazy">
+              <div class="xlink-card-info">
+                <div class="xlink-card-name">5 Lions Dance</div>
+                <span class="xlink-card-rtp">95.08% RTP</span>
+              </div>
+            </a>
+            <a href="wealth-inn.html" class="xlink-card">
+              <img src="https://assets.slotslaunch.com/13795/wealth-inn.jpg" alt="Wealth Inn" loading="lazy">
+              <div class="xlink-card-info">
+                <div class="xlink-card-name">Wealth Inn</div>
+                <span class="xlink-card-rtp">96.72% RTP</span>
+              </div>
+            </a>
+        </div>
+      </div><div class="xlink-section">
+        <div class="xlink-section-header">
+          <h3>🔥 Popular Slots</h3>
+          <a href="../slot-games.html" class="xlink-see-all">View all slots &rarr;</a>
+        </div>
+        <div class="xlink-grid">
+            <a href="wild-west-gold.html" class="xlink-card">
+              <img src="https://assets.slotslaunch.com/5737/wild-west-gold.jpg" alt="Wild West Gold" loading="lazy">
+              <div class="xlink-card-info">
+                <div class="xlink-card-name">Wild West Gold</div>
+                <span class="xlink-card-rtp">96.51% RTP</span>
+              </div>
+            </a>
+            <a href="fruit-party.html" class="xlink-card">
+              <img src="https://assets.slotslaunch.com/5618/fruit-party.jpg" alt="Fruit Party" loading="lazy">
+              <div class="xlink-card-info">
+                <div class="xlink-card-name">Fruit Party</div>
+                <span class="xlink-card-rtp">97.31% RTP</span>
+              </div>
+            </a>
+            <a href="gates-of-olympus.html" class="xlink-card">
+              <img src="https://assets.slotslaunch.com/5621/gates-of-olympus.jpg" alt="Gates of Olympus" loading="lazy">
+              <div class="xlink-card-info">
+                <div class="xlink-card-name">Gates of Olympus</div>
+                <span class="xlink-card-rtp">94.43% RTP</span>
+              </div>
+            </a>
+            <a href="book-of-dead.html" class="xlink-card">
+              <div class="xlink-card-placeholder"><span>BO</span></div>
+              <div class="xlink-card-info">
+                <div class="xlink-card-name">Book of Dead</div>
+                <span class="xlink-card-rtp">96.21% RTP</span>
+              </div>
+            </a>
+            <a href="shining-crown.html" class="xlink-card">
+              <div class="xlink-card-placeholder"><span>SH</span></div>
+              <div class="xlink-card-info">
+                <div class="xlink-card-name">Shining Crown</div>
+                <span class="xlink-card-rtp">96.37% RTP</span>
+              </div>
+            </a>
+            <a href="buffalo-king-megaways.html" class="xlink-card">
+              <img src="https://assets.slotslaunch.com/2731/buffal-king-megaways.jpg" alt="Buffalo King Megaways" loading="lazy">
+              <div class="xlink-card-info">
+                <div class="xlink-card-name">Buffalo King Megaways</div>
+                <span class="xlink-card-rtp">95.61% RTP</span>
+              </div>
+            </a>
+        </div>
       </div>
-    </div>
   </div>
 </section>
 
@@ -367,7 +477,7 @@
   <div class="container">
     <h2>Ready to Play Mystic Fortune Deluxe?</h2>
     <p>Join thousands of South African players on Spina Zonke and start spinning today.</p>
-    <a href="https://www.hollywoodbets.net" class="btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer">Play at Hollywoodbets</a>
+    <a href="https://www.hollywoodbets.net" class="btn btn-primary btn-cta" target="_blank" rel="noopener noreferrer">Play at Hollywoodbets</a>
   </div>
 </section>
 
@@ -416,7 +526,7 @@
     <div class="sticky-cta-name">Mystic Fortune Deluxe</div>
     <div class="sticky-cta-sub">Play for real money</div>
   </div>
-  <a href="https://www.mzansiwins.co.za/link/96a5aad0181116205024/" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Play Now</a>
+  <a href="https://www.mzansiwins.co.za/link/96a5aad0181116205024/" class="btn btn-primary btn-table" target="_blank" rel="noopener noreferrer">Play Now</a>
 </div>
 </body>
 </html>
