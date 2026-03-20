@@ -1,87 +1,100 @@
-/* 
-  Hero animated background injector
-  Creates 3 SVG pattern layers with casino icons that drift diagonally.
-  Each layer has different icon sizes, spacing, speed, and direction. 
+/*
+  Hero Slot Machine Reels Background
+  Creates vertical spinning columns of 7s and stars,
+  like an old-school slot machine running in the background.
 */
 (function() {
-  // SVG icon paths (casino themed) — slot machine, dice, 777, chip, cherry, diamond, cards, star
-  const icons = {
-    slotMachine: `<path d="M6 2h12a2 2 0 012 2v16a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2zm0 2v4h12V4H6zm0 6v4h4v-4H6zm6 0v4h6v-4h-6zm-6 6v4h12v-4H6zm2-8h2v2H8V8zm4 0h2v2h-2V8zm4 0h2v2h-2V8z" fill="currentColor"/>`,
-    dice: `<rect x="2" y="2" width="20" height="20" rx="3" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="8" r="1.5" fill="currentColor"/><circle cx="16" cy="8" r="1.5" fill="currentColor"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/><circle cx="8" cy="16" r="1.5" fill="currentColor"/><circle cx="16" cy="16" r="1.5" fill="currentColor"/>`,
-    seven: `<text x="4" y="20" font-family="Arial Black,sans-serif" font-size="22" font-weight="900" fill="currentColor">7</text>`,
-    chip: `<circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="6" fill="none" stroke="currentColor" stroke-width="1"/><circle cx="12" cy="12" r="2.5" fill="currentColor"/><line x1="12" y1="2" x2="12" y2="6" stroke="currentColor" stroke-width="1.5"/><line x1="12" y1="18" x2="12" y2="22" stroke="currentColor" stroke-width="1.5"/><line x1="2" y1="12" x2="6" y2="12" stroke="currentColor" stroke-width="1.5"/><line x1="18" y1="12" x2="22" y2="12" stroke="currentColor" stroke-width="1.5"/>`,
-    cherry: `<circle cx="8" cy="17" r="4" fill="currentColor"/><circle cx="16" cy="15" r="4" fill="currentColor"/><path d="M8 13 C8 6, 12 3, 12 3 C12 3, 16 6, 16 11" fill="none" stroke="currentColor" stroke-width="1.5"/>`,
-    diamond: `<path d="M12 2L22 12L12 22L2 12Z" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12 2L22 12L12 22L2 12Z" fill="currentColor" opacity="0.15"/>`,
-    cards: `<rect x="3" y="4" width="12" height="16" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.2" transform="rotate(-8 9 12)"/><rect x="9" y="4" width="12" height="16" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.2" transform="rotate(8 15 12)"/>`,
-    star: `<path d="M12 2l2.9 6.3L22 9.2l-5 5.2L18.2 22 12 18.5 5.8 22 7 14.4l-5-5.2 7.1-.9z" fill="currentColor" opacity="0.3" stroke="currentColor" stroke-width="1"/>`,
-    crown: `<path d="M3 18h18v2H3zM3 18l3-8 4 4 3-10 3 10 4-4 3 8z" fill="currentColor" opacity="0.2" stroke="currentColor" stroke-width="1.2"/>`
+  // SVG symbols — classic slot 7s and stars only
+  const symbols = {
+    seven: (color) => `<text x="12" y="20" text-anchor="middle" font-family="'Arial Black','Impact',sans-serif" font-size="22" font-weight="900" fill="${color}">7</text>`,
+    star: (color) => `<polygon points="12,2 14.9,8.6 22,9.6 17,14.8 18.2,22 12,18.5 5.8,22 7,14.8 2,9.6 9.1,8.6" fill="${color}"/>`,
+    sevenOutline: (color) => `<text x="12" y="20" text-anchor="middle" font-family="'Arial Black','Impact',sans-serif" font-size="22" font-weight="900" fill="none" stroke="${color}" stroke-width="0.8">7</text>`,
+    starOutline: (color) => `<polygon points="12,2 14.9,8.6 22,9.6 17,14.8 18.2,22 12,18.5 5.8,22 7,14.8 2,9.6 9.1,8.6" fill="none" stroke="${color}" stroke-width="0.8"/>`,
   };
 
-  // Seedable pseudo-random for consistent icon placement
-  function seededRandom(seed) {
-    let s = seed;
-    return function() {
-      s = (s * 16807 + 0) % 2147483647;
-      return (s - 1) / 2147483646;
-    };
-  }
+  // Colors for the symbols — subtle gold, white, cyan tones
+  const colors = [
+    'rgba(255,215,0,0.25)',   // gold
+    'rgba(255,255,255,0.18)', // white
+    'rgba(125,249,255,0.15)', // cyan
+    'rgba(255,215,0,0.12)',   // dimmer gold
+    'rgba(255,255,255,0.10)', // dimmer white
+  ];
 
-  function buildPatternSVG(iconSet, spacing, iconSize, seed) {
-    const cols = 10;
-    const rows = 10;
-    const svgW = cols * spacing;
-    const svgH = rows * spacing;
-    const rng = seededRandom(seed);
-
+  // Create one reel column SVG strip
+  function buildReelStrip(numSymbols, iconSize, seed) {
+    const cellH = iconSize + 16;
+    const totalH = numSymbols * cellH;
     let shapes = '';
-    let idx = 0;
-    for (let r = 0; r < rows; r++) {
-      for (let c = 0; c < cols; c++) {
-        const icon = iconSet[idx % iconSet.length];
-        const offsetX = (r % 2 === 0) ? 0 : spacing * 0.5;
-        const jitterX = (rng() - 0.5) * spacing * 0.3;
-        const jitterY = (rng() - 0.5) * spacing * 0.3;
-        const x = c * spacing + offsetX + jitterX + spacing * 0.2;
-        const y = r * spacing + jitterY + spacing * 0.2;
-        const rot = Math.floor(rng() * 60) - 30;
-        shapes += `<g transform="translate(${x.toFixed(1)}, ${y.toFixed(1)}) rotate(${rot}, ${iconSize/2}, ${iconSize/2})">
-          <svg viewBox="0 0 24 24" width="${iconSize}" height="${iconSize}" color="rgba(255,255,255,1)">${icons[icon]}</svg>
-        </g>`;
-        idx++;
-      }
+    let s = seed;
+    function rng() { s = (s * 16807) % 2147483647; return (s - 1) / 2147483646; }
+
+    const types = ['seven', 'star', 'sevenOutline', 'starOutline'];
+
+    for (let i = 0; i < numSymbols; i++) {
+      const type = types[Math.floor(rng() * types.length)];
+      const color = colors[Math.floor(rng() * colors.length)];
+      const y = i * cellH;
+      const rot = Math.floor(rng() * 20) - 10;
+      shapes += `<g transform="translate(0, ${y}) rotate(${rot}, ${iconSize/2}, ${iconSize/2})">
+        <svg viewBox="0 0 24 24" width="${iconSize}" height="${iconSize}">${symbols[type](color)}</svg>
+      </g>`;
     }
 
-    return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${svgW} ${svgH}" preserveAspectRatio="none">${shapes}</svg>`;
+    return { svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${iconSize} ${totalH}" width="${iconSize}" height="${totalH}">${shapes}</svg>`, height: totalH };
   }
 
-  // Three layers with different configs
-  const layer1SVG = buildPatternSVG(
-    ['slotMachine', 'dice', 'seven', 'chip', 'cherry', 'diamond', 'cards', 'star', 'crown'],
-    130, 38, 42
-  );
-  const layer2SVG = buildPatternSVG(
-    ['diamond', 'seven', 'chip', 'star', 'slotMachine', 'cherry', 'crown', 'dice', 'cards'],
-    110, 30, 137
-  );
-  const layer3SVG = buildPatternSVG(
-    ['cherry', 'cards', 'star', 'dice', 'diamond', 'seven', 'crown', 'chip', 'slotMachine'],
-    150, 24, 293
-  );
+  // Build the full reel background
+  function buildReelBackground() {
+    const container = document.createElement('div');
+    container.className = 'hero-reels';
+    container.setAttribute('aria-hidden', 'true');
+
+    // Create multiple reel columns at varying positions and speeds
+    const reelConfigs = [
+      { x: '2%',  size: 40, count: 20, speed: 18, seed: 42,  delay: 0 },
+      { x: '10%', size: 32, count: 24, speed: 22, seed: 137, delay: -4 },
+      { x: '18%', size: 44, count: 18, speed: 16, seed: 293, delay: -8 },
+      { x: '28%', size: 28, count: 28, speed: 25, seed: 71,  delay: -2 },
+      { x: '36%', size: 36, count: 22, speed: 20, seed: 511, delay: -6 },
+      { x: '45%', size: 42, count: 18, speed: 17, seed: 199, delay: -10 },
+      { x: '55%', size: 30, count: 26, speed: 23, seed: 347, delay: -3 },
+      { x: '64%', size: 38, count: 20, speed: 19, seed: 89,  delay: -7 },
+      { x: '73%', size: 34, count: 22, speed: 21, seed: 461, delay: -1 },
+      { x: '82%', size: 44, count: 18, speed: 16, seed: 631, delay: -9 },
+      { x: '90%', size: 28, count: 28, speed: 24, seed: 157, delay: -5 },
+      { x: '96%', size: 36, count: 22, speed: 20, seed: 773, delay: -11 },
+    ];
+
+    reelConfigs.forEach((cfg, i) => {
+      const strip = buildReelStrip(cfg.count, cfg.size, cfg.seed);
+      const reel = document.createElement('div');
+      reel.className = 'hero-reel';
+      reel.style.cssText = `
+        left: ${cfg.x};
+        width: ${cfg.size}px;
+        animation-duration: ${cfg.speed}s;
+        animation-delay: ${cfg.delay}s;
+      `;
+      // Double the strip for seamless looping
+      reel.innerHTML = strip.svg + strip.svg;
+      reel.dataset.stripHeight = strip.height;
+      container.appendChild(reel);
+    });
+
+    return container;
+  }
 
   // Inject into all hero sections
   document.querySelectorAll('.hero').forEach(hero => {
-    // Remove old emoji floats if present
+    // Remove old patterns
+    const oldPattern = hero.querySelector('.hero-bg-pattern');
+    if (oldPattern) oldPattern.remove();
     const oldFloats = hero.querySelector('.hero-floats');
     if (oldFloats) oldFloats.remove();
+    const oldReels = hero.querySelector('.hero-reels');
+    if (oldReels) oldReels.remove();
 
-    const container = document.createElement('div');
-    container.className = 'hero-bg-pattern';
-    container.setAttribute('aria-hidden', 'true');
-    container.innerHTML = `
-      <div class="hero-bg-layer hero-bg-layer--1">${layer1SVG}</div>
-      <div class="hero-bg-layer hero-bg-layer--2">${layer2SVG}</div>
-      <div class="hero-bg-layer hero-bg-layer--3">${layer3SVG}</div>
-    `;
-    hero.insertBefore(container, hero.firstChild);
+    hero.insertBefore(buildReelBackground(), hero.firstChild);
   });
 })();
