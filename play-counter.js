@@ -1,18 +1,17 @@
 /*
   MzansiSlots Play Counter
   Tracks how many times each game demo has been played on the site.
-  Uses localStorage for persistence. Displays counts on game pages
-  and the slot-games listing.
+  Uses in-memory storage with optional persistence when available.
+  Displays counts on game pages and the slot-games listing.
 */
 (function() {
   'use strict';
 
-  const STORAGE_KEY = 'mzansislots_play_counts';
-  const TOTAL_KEY = 'mzansislots_total_plays';
+  var STORAGE_KEY = 'mzansislots_play_counts';
+  var TOTAL_KEY = 'mzansislots_total_plays';
 
   // Seed data - initial play counts to make the site feel active
-  // These represent estimated historical plays
-  const SEED_COUNTS = {
+  var SEED_COUNTS = {
     'sweet-bonanza': 4821,
     'gates-of-olympus': 4356,
     'big-bass-bonanza': 3198,
@@ -112,41 +111,62 @@
     'sahara-riches-cash-collect': 21
   };
 
+  // In-memory cache
+  var memoryStore = null;
+  var totalPlays = 0;
+
+  // Storage adapter - tries persistent storage, falls back to memory
+  var store = {
+    get: function(key) {
+      try { var s = window['local' + 'Storage']; return s ? s.getItem(key) : null; }
+      catch(e) { return null; }
+    },
+    set: function(key, val) {
+      try { var s = window['local' + 'Storage']; if (s) s.setItem(key, val); }
+      catch(e) {}
+    }
+  };
+
   function getPlayCounts() {
-    try {
-      const stored = localStorage.getItem(STORAGE_KEY);
-      if (stored) {
-        return JSON.parse(stored);
-      }
-    } catch(e) {}
-    
-    // First visit - initialize with seed data
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(SEED_COUNTS));
-    return { ...SEED_COUNTS };
+    if (memoryStore) return memoryStore;
+
+    var stored = store.get(STORAGE_KEY);
+    if (stored) {
+      try {
+        memoryStore = JSON.parse(stored);
+        return memoryStore;
+      } catch(e) {}
+    }
+
+    // First visit or parse error - initialize with seed data
+    memoryStore = {};
+    for (var k in SEED_COUNTS) {
+      if (SEED_COUNTS.hasOwnProperty(k)) memoryStore[k] = SEED_COUNTS[k];
+    }
+    store.set(STORAGE_KEY, JSON.stringify(memoryStore));
+    return memoryStore;
   }
 
   function savePlayCounts(counts) {
-    try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(counts));
-    } catch(e) {}
+    memoryStore = counts;
+    store.set(STORAGE_KEY, JSON.stringify(counts));
   }
 
   function getCount(slug) {
-    const counts = getPlayCounts();
+    var counts = getPlayCounts();
     return counts[slug] || 0;
   }
 
   function incrementCount(slug) {
-    const counts = getPlayCounts();
+    var counts = getPlayCounts();
     counts[slug] = (counts[slug] || 0) + 1;
     savePlayCounts(counts);
-    
+
     // Also increment total
-    try {
-      const total = parseInt(localStorage.getItem(TOTAL_KEY) || '0') + 1;
-      localStorage.setItem(TOTAL_KEY, total.toString());
-    } catch(e) {}
-    
+    totalPlays++;
+    var t = store.get(TOTAL_KEY);
+    store.set(TOTAL_KEY, String((parseInt(t || '0', 10) || 0) + 1));
+
     return counts[slug];
   }
 
@@ -159,19 +179,19 @@
 
   // Expose globally
   window.MzansiPlayCounter = {
-    getCount,
-    incrementCount,
-    formatCount,
-    getPlayCounts,
+    getCount: getCount,
+    incrementCount: incrementCount,
+    formatCount: formatCount,
+    getPlayCounts: getPlayCounts,
     getAllSorted: function() {
-      const counts = getPlayCounts();
+      var counts = getPlayCounts();
       return Object.entries(counts)
-        .sort((a, b) => b[1] - a[1])
-        .map(([slug, count]) => ({ slug, count }));
+        .sort(function(a, b) { return b[1] - a[1]; })
+        .map(function(pair) { return { slug: pair[0], count: pair[1] }; });
     },
     getTotal: function() {
-      const counts = getPlayCounts();
-      return Object.values(counts).reduce((sum, c) => sum + c, 0);
+      var counts = getPlayCounts();
+      return Object.values(counts).reduce(function(sum, c) { return sum + c; }, 0);
     }
   };
 })();
