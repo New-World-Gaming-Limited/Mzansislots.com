@@ -312,10 +312,29 @@
         MzansiSlots
       </a>
       <nav>
-        <ul class="nav-desktop">          <li><a href="best-slot-sites.html">Best Slot Sites</a></li>
+        <ul class="nav-desktop">
+          <li><a href="best-slot-sites.html">Best Slot Sites</a></li>
           <li><a href="slot-games.html">Slot Games</a></li>
           <li><a href="lekka-slots.html">Lekka Slots</a></li>
-          <li><a href="pragmatic-play.html" class="active">Pragmatic Play</a></li>
+          <li class="nav-dropdown">
+            <a href="slot-games.html" class="nav-dropdown-trigger">Game Studios <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l4 4 4-4"/></svg></a>
+            <ul class="nav-dropdown-menu">
+              <li><a href="pragmatic-play.html">Pragmatic Play</a></li>
+              <li><a href="play-n-go.html">Play'n GO</a></li>
+              <li><a href="red-tiger-gaming.html">Red Tiger</a></li>
+              <li><a href="hacksaw-gaming.html">Hacksaw Gaming</a></li>
+              <li><a href="bgaming.html">BGaming</a></li>
+              <li><a href="betsoft.html">Betsoft</a></li>
+              <li><a href="booming-games.html">Booming Games</a></li>
+              <li><a href="endorphina.html">Endorphina</a></li>
+              <li><a href="habanero.html">Habanero</a></li>
+              <li><a href="spinomenal.html">Spinomenal</a></li>
+              <li><a href="wazdan.html">Wazdan</a></li>
+              <li><a href="spribe.html">Spribe</a></li>
+              <li><a href="amusnet.html">Amusnet</a></li>
+              <li><a href="aviatrix.html">Aviatrix</a></li>
+            </ul>
+          </li>
           <li><a href="spina-zonke.html">Spina Zonke</a></li>
           <li><a href="news.html">News &amp; Guides</a></li>
         </ul>
@@ -329,10 +348,18 @@
         </button>
       </div>
     </div>
-    <nav class="mobile-nav">      <a href="best-slot-sites.html">Best Slot Sites</a>
+    <nav class="mobile-nav">
+      <a href="best-slot-sites.html">Best Slot Sites</a>
       <a href="slot-games.html">Slot Games</a>
       <a href="lekka-slots.html">Lekka Slots</a>
-      <a href="pragmatic-play.html" class="active">Pragmatic Play</a>
+      <span class="mobile-nav-label">Game Studios</span>
+      <a href="pragmatic-play.html">Pragmatic Play</a>
+      <a href="play-n-go.html">Play'n GO</a>
+      <a href="red-tiger-gaming.html">Red Tiger</a>
+      <a href="hacksaw-gaming.html">Hacksaw Gaming</a>
+      <a href="bgaming.html">BGaming</a>
+      <a href="betsoft.html">Betsoft</a>
+      <a href="slot-games.html" class="mobile-nav-more">View All Studios &rarr;</a>
       <a href="spina-zonke.html">Spina Zonke</a>
       <a href="news.html">News &amp; Guides</a>
     </nav>
@@ -350,11 +377,39 @@
     <span class="hero-float">7️⃣</span>
   </div>
   <div class="container hero-content">
-    <h1><img src="assets/providers/pragmatic-play.png" alt="Pragmatic Play" class="provider-hub-logo" loading="lazy"> <span>Pragmatic Play</span> Slots</h1>
+    <h1><span>Pragmatic Play</span> Slots - Where to Play in SA</h1>
     <p>The best Pragmatic Play slots - handpicked franchises from Sweet Bonanza to Gates of Olympus. South Africa's most popular provider.</p>
   </div>
 </section>
 
+
+<!-- ═══ GAMES GRID ═══ -->
+<section class="section">
+  <div class="container" style="max-width: var(--content-wide);">
+
+    <!-- Toolbar -->
+    <div class="tiles-toolbar">
+      <input type="text" class="tiles-search" id="gameSearch" placeholder="Search Pragmatic Play games..." autocomplete="off">
+      <div class="tiles-filter-group">
+        <button class="tiles-filter-btn active" data-filter="all">All</button>
+        <button class="tiles-filter-btn" data-filter="megaways">Megaways</button>
+        <button class="tiles-filter-btn" data-filter="bonus_buy">Bonus Buy</button>
+        <button class="tiles-filter-btn" data-filter="jackpot">Jackpot</button>
+      </div>
+      <span class="tiles-count" id="gameCount"></span>
+    </div>
+
+    <!-- Games Container (franchise sections rendered here) -->
+    <div id="gamesContainer"></div>
+
+    <!-- No Results -->
+    <div class="no-results" id="noResults" style="display:none;">
+      <h3>No games found</h3>
+      <p>Try a different search term or clear your filters.</p>
+    </div>
+
+  </div>
+</section>
 
 <section class="section">
   <div class="container" style="max-width: var(--content-wide);">
@@ -455,34 +510,6 @@
   </table>
   <div class="prov-expand-wrap"><button class="prov-expand-btn" onclick="this.closest('.prov-casino-section').classList.toggle('prov-expanded');this.textContent=this.textContent.includes('Show all')?'Show less':'Show all casinos';">Show all casinos</button></div>
 </div>
-  </div>
-</section>
-
-<!-- ═══ GAMES GRID ═══ -->
-<section class="section">
-  <div class="container" style="max-width: var(--content-wide);">
-
-    <!-- Toolbar -->
-    <div class="tiles-toolbar">
-      <input type="text" class="tiles-search" id="gameSearch" placeholder="Search Pragmatic Play games..." autocomplete="off">
-      <div class="tiles-filter-group">
-        <button class="tiles-filter-btn active" data-filter="all">All</button>
-        <button class="tiles-filter-btn" data-filter="megaways">Megaways</button>
-        <button class="tiles-filter-btn" data-filter="bonus_buy">Bonus Buy</button>
-        <button class="tiles-filter-btn" data-filter="jackpot">Jackpot</button>
-      </div>
-      <span class="tiles-count" id="gameCount"></span>
-    </div>
-
-    <!-- Games Container (franchise sections rendered here) -->
-    <div id="gamesContainer"></div>
-
-    <!-- No Results -->
-    <div class="no-results" id="noResults" style="display:none;">
-      <h3>No games found</h3>
-      <p>Try a different search term or clear your filters.</p>
-    </div>
-
   </div>
 </section>
 
