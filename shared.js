@@ -103,8 +103,45 @@ function initScrollReveal() {
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 }
 
+// Back to top button
+function initBackToTop() {
+  const btn = document.createElement('button');
+  btn.className = 'back-to-top';
+  btn.setAttribute('aria-label', 'Back to top');
+  btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>';
+  document.body.appendChild(btn);
+  
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        btn.classList.toggle('visible', window.scrollY > 600);
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+  
+  btn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
+// Active nav link highlighting
+function initActiveNav() {
+  const path = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.nav-desktop a, .mobile-nav a').forEach(link => {
+    const href = link.getAttribute('href')?.split('/').pop() || '';
+    if (href === path) {
+      link.classList.add('nav-active');
+    }
+  });
+}
+
 // Init
 document.addEventListener('DOMContentLoaded', () => {
   initProviderFilter();
   initScrollReveal();
+  initBackToTop();
+  initActiveNav();
 });

@@ -4451,3 +4451,330 @@ a.game-tag-link:active {
     grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
   }
 }
+
+
+/* ═══════════════════════════════════════════════
+   UX IMPROVEMENTS - March 2026
+   ═══════════════════════════════════════════════ */
+
+/* Smooth scroll */
+html { scroll-behavior: smooth; }
+
+/* Better focus styles for accessibility */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* Hero CTA buttons */
+.hero-cta-group {
+  display: flex;
+  gap: var(--space-4);
+  margin-top: var(--space-8);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hero-cta-primary {
+  background: #ffffff !important;
+  color: var(--color-primary) !important;
+  font-weight: 700;
+  padding: var(--space-3) var(--space-8);
+  font-size: var(--text-base);
+  border: 2px solid #ffffff !important;
+  transition: all 0.2s ease;
+}
+.hero-cta-primary:hover {
+  background: transparent !important;
+  color: #ffffff !important;
+}
+
+.hero-cta-secondary {
+  background: transparent !important;
+  color: #ffffff !important;
+  border: 2px solid rgba(255,255,255,0.5) !important;
+  padding: var(--space-3) var(--space-8);
+  font-size: var(--text-base);
+  transition: all 0.2s ease;
+}
+.hero-cta-secondary:hover {
+  background: rgba(255,255,255,0.1) !important;
+  border-color: #ffffff !important;
+}
+
+/* Improved game-card-img for actual images */
+img.game-card-img {
+  width: 100%;
+  aspect-ratio: 16/10;
+  object-fit: cover;
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+  display: block;
+}
+
+/* Better card hover transitions */
+.card, .game-card, .brand-card, .criteria-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card:hover, .game-card:hover, .brand-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+.criteria-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Improved criteria cards in dark mode */
+[data-theme="dark"] .criteria-card {
+  background: var(--color-surface-2);
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+/* Better news card image placeholders */
+.card-img {
+  min-height: 160px;
+  position: relative;
+  overflow: hidden;
+}
+.card-img::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.15));
+}
+
+/* Provider page game list improvements */
+.provider-game-row {
+  transition: background-color 0.15s ease;
+}
+.provider-game-row:hover {
+  background: var(--color-surface-offset);
+}
+
+/* About page improvements */
+.about-container h2 {
+  margin-top: var(--space-10);
+  padding-bottom: var(--space-3);
+  border-bottom: 2px solid var(--color-border);
+}
+.about-container h2:first-of-type {
+  margin-top: 0;
+}
+.about-container ul, .about-container ol {
+  padding-left: var(--space-6);
+}
+.about-container li {
+  margin-bottom: var(--space-3);
+  line-height: 1.7;
+}
+
+/* Improved scroll to top - add subtle back-to-top */
+.closing-cta {
+  position: relative;
+}
+
+/* Better mobile casino table */
+@media (max-width: 768px) {
+  .casino-table-wrapper {
+    overflow-x: visible;
+  }
+  .casino-table {
+    display: block;
+  }
+  .casino-table thead {
+    display: none;
+  }
+  .casino-table tr {
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-4);
+    border-bottom: 1px solid var(--color-divider);
+    gap: var(--space-2);
+  }
+  .casino-table td {
+    display: block;
+    padding: var(--space-1) 0;
+    border: none;
+  }
+}
+
+/* Better button hover states */
+.btn {
+  transition: all 0.2s ease;
+}
+.btn:active {
+  transform: scale(0.97);
+}
+
+/* FAQ smoother animation */
+.faq-answer {
+  transition: max-height 0.3s ease, padding 0.3s ease, opacity 0.3s ease;
+}
+.faq-item.open .faq-answer {
+  opacity: 1;
+}
+
+/* Provider crosslink pills - improve hover */
+.provider-crosslink {
+  transition: all 0.2s ease;
+}
+.provider-crosslink:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Skeleton loading for lazy images */
+img[loading="lazy"] {
+  background: var(--color-surface-offset);
+}
+
+/* Better byline styling */
+.byline-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-4);
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-4);
+}
+.byline-bar svg {
+  width: 14px;
+  height: 14px;
+  vertical-align: -2px;
+  margin-right: 2px;
+  opacity: 0.6;
+}
+
+/* Improved game specs table */
+.game-specs {
+  border-collapse: collapse;
+  width: 100%;
+}
+.game-specs td, .game-specs th {
+  padding: var(--space-2) var(--space-3);
+  text-align: left;
+  border-bottom: 1px solid var(--color-divider);
+}
+.game-specs th {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+/* Game series and cross-link cards */
+.series-card, .xlink-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.series-card:hover, .xlink-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Legal disclaimer bar - improved readability */
+.legal-disclaimer {
+  font-size: var(--text-xs);
+  line-height: 1.6;
+  padding: var(--space-3) var(--space-4);
+}
+
+/* Selection color */
+::selection {
+  background: rgba(37, 99, 235, 0.2);
+  color: inherit;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Back to top button */
+.back-to-top {
+  position: fixed;
+  bottom: var(--space-6);
+  right: var(--space-6);
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-full);
+  background: var(--color-primary);
+  color: var(--color-text-inverse);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-lg);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease, background 0.2s ease;
+  pointer-events: none;
+  z-index: 100;
+}
+.back-to-top.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.back-to-top:hover {
+  background: var(--color-primary-hover);
+}
+[data-theme="dark"] .back-to-top {
+  background: var(--color-accent);
+}
+[data-theme="dark"] .back-to-top:hover {
+  background: var(--color-accent-hover);
+}
+
+/* Active nav link */
+.nav-desktop .nav-active {
+  color: var(--color-teal) !important;
+  position: relative;
+}
+.nav-desktop .nav-active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--color-teal);
+  border-radius: 2px;
+}
+.mobile-nav .nav-active {
+  color: #ffffff !important;
+  font-weight: 600;
+}
+
+/* Editorial meta bar - below header */
+.editorial-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-5);
+  padding: var(--space-2) var(--space-4);
+  background: var(--color-surface-offset);
+  border-bottom: 1px solid var(--color-divider);
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  justify-content: flex-end;
+  max-width: 100%;
+}
+.editorial-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+}
+.editorial-meta-item svg {
+  width: 13px;
+  height: 13px;
+  opacity: 0.5;
+  flex-shrink: 0;
+}
+[data-theme="dark"] .editorial-meta {
+  background: var(--color-surface);
+}
