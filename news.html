@@ -23,11 +23,193 @@
 <link rel="manifest" href="site.webmanifest">
 <meta name="theme-color" content="#1a1a2e">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Slots News & Guides South Africa - Tips & Updates | MzansiSlots</title>
-<meta name="description" content="Latest online slots news, guides, tips, and industry updates from South Africa. Stay informed about new games, bonuses, and casino launches at MzansiSlots.">
+<title>Slots News & Guides South Africa - Reviews, Tips & Updates | MzansiSlots</title>
+<meta name="description" content="South Africa's slot hub: game reviews, strategy guides, industry news, and responsible gambling resources. Expert content for SA slots players at MzansiSlots.">
 <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="style.css">
+<style>
+/* ═══ NEWS HUB STYLES ═══ */
+.hub-nav {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: var(--space-10);
+}
+.hub-nav-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-full);
+  border: 1.5px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text-muted);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--text-sm);
+  text-decoration: none;
+  transition: all 200ms;
+  cursor: pointer;
+}
+.hub-nav-btn:hover {
+  border-color: var(--color-primary);
+  color: var(--color-text);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+.hub-nav-btn .hub-icon {
+  font-size: 1.1em;
+}
+
+/* Category Hub Section */
+.hub-section {
+  padding: var(--space-16) 0;
+  scroll-margin-top: 80px;
+}
+.hub-section:nth-child(even) {
+  background: var(--color-surface-alt);
+}
+.hub-header {
+  margin-bottom: var(--space-8);
+}
+.hub-header h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-2xl);
+  color: var(--color-text);
+  margin-bottom: var(--space-2);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+.hub-header h2 .hub-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-lg);
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+.hub-header p {
+  color: var(--color-text-muted);
+  font-size: var(--text-base);
+  max-width: 680px;
+}
+
+/* Hub cards grid */
+.hub-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-5);
+}
+@media (min-width: 640px) {
+  .hub-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1024px) {
+  .hub-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+.hub-card {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+  transition: transform 200ms, box-shadow 200ms;
+}
+.hub-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+}
+.hub-card-header {
+  padding: var(--space-6) var(--space-5) var(--space-4);
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+.hub-card-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+}
+.hub-card-meta {
+  flex: 1;
+}
+.hub-card-meta .card-tag {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  display: inline-block;
+  margin-bottom: var(--space-2);
+}
+.hub-card-meta h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-base);
+  color: var(--color-text);
+  line-height: 1.3;
+  margin-bottom: var(--space-1);
+}
+.hub-card-meta .card-date {
+  font-size: var(--text-xs);
+  color: var(--color-text-faint);
+}
+.hub-card-body {
+  padding: 0 var(--space-5) var(--space-5);
+}
+.hub-card-body p {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin-bottom: var(--space-4);
+}
+.hub-card-body .hub-read-more {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--text-xs);
+  color: var(--color-primary);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  transition: color 150ms;
+}
+.hub-card-body .hub-read-more:hover { color: var(--color-accent); }
+.hub-card-body .hub-read-more svg { width: 14px; height: 14px; transition: transform 150ms; }
+.hub-card-body .hub-read-more:hover svg { transform: translateX(3px); }
+
+/* Category color accents */
+.hub-review .hub-badge { background: rgba(99, 102, 241, 0.15); color: #6366f1; }
+.hub-review .card-tag { background: rgba(99, 102, 241, 0.12); color: #6366f1; }
+.hub-strategy .hub-badge { background: rgba(34, 197, 94, 0.15); color: #16a34a; }
+.hub-strategy .card-tag { background: rgba(34, 197, 94, 0.12); color: #16a34a; }
+.hub-news .hub-badge { background: rgba(59, 130, 246, 0.15); color: #2563eb; }
+.hub-news .card-tag { background: rgba(59, 130, 246, 0.12); color: #2563eb; }
+.hub-responsible .hub-badge { background: rgba(245, 158, 11, 0.15); color: #d97706; }
+.hub-responsible .card-tag { background: rgba(245, 158, 11, 0.12); color: #d97706; }
+
+[data-theme="dark"] .hub-review .hub-badge { background: rgba(99, 102, 241, 0.2); }
+[data-theme="dark"] .hub-review .card-tag { background: rgba(99, 102, 241, 0.2); }
+[data-theme="dark"] .hub-strategy .hub-badge { background: rgba(34, 197, 94, 0.2); }
+[data-theme="dark"] .hub-strategy .card-tag { background: rgba(34, 197, 94, 0.2); }
+[data-theme="dark"] .hub-news .hub-badge { background: rgba(59, 130, 246, 0.2); }
+[data-theme="dark"] .hub-news .card-tag { background: rgba(59, 130, 246, 0.2); }
+[data-theme="dark"] .hub-responsible .hub-badge { background: rgba(245, 158, 11, 0.2); }
+[data-theme="dark"] .hub-responsible .card-tag { background: rgba(245, 158, 11, 0.2); }
+</style>
 </head>
 <body>
 
@@ -79,157 +261,273 @@
   </div>
   <div class="container hero-content">
     <h1><span>News &amp; Guides</span></h1>
-    <p>Stay informed with the latest slot news, expert guides, and industry updates from South Africa.</p>
+    <p>Reviews, strategy, industry updates, and responsible gambling resources for South African slots players.</p>
   </div>
 </section>
 
-<!-- ═══ SEARCH BAR ═══ -->
-<section class="section">
+<!-- ═══ HUB NAVIGATION ═══ -->
+<section class="section" style="padding-bottom:0;">
   <div class="container">
-    <div class="search-bar">
-      <input type="text" id="news-search" placeholder="Search articles..." aria-label="Search articles">
-    </div>
+    <nav class="hub-nav">
+      <a href="#reviews" class="hub-nav-btn"><span class="hub-icon">🎰</span> Slot Reviews</a>
+      <a href="#strategy" class="hub-nav-btn"><span class="hub-icon">🧠</span> Strategy Guides</a>
+      <a href="#industry" class="hub-nav-btn"><span class="hub-icon">📰</span> Industry News</a>
+      <a href="#responsible" class="hub-nav-btn"><span class="hub-icon">🛡️</span> Responsible Gambling</a>
+    </nav>
+  </div>
+</section>
 
-    <!-- ═══ ARTICLE GRID ═══ -->
-    <div class="grid-4" id="article-grid">
-      <!-- 1 -->
-      <div class="card article-card">
-        <div class="card-img" style="background: linear-gradient(135deg, #1e3a5f, #38bdf8); display: flex; align-items: center; justify-content: center; font-size: 3rem;">📰</div>
-        <div class="card-body">
-          <span class="card-tag">Industry News</span>
-          <h3 class="card-title article-text">South Africa's Online Gambling Market Grows 35% in 2025</h3>
-          <span class="card-date">10 March 2026</span>
-          <p class="card-excerpt">The South African online gambling industry saw record growth in 2025, driven by mobile adoption and the rise of platforms like Spina Zonke. Experts predict continued expansion through 2026.</p>
-          <a href="#" class="btn btn-teal btn-sm">Read More</a>
+<!-- ═══ SLOT REVIEWS HUB ═══ -->
+<section class="hub-section hub-review" id="reviews">
+  <div class="container">
+    <div class="hub-header">
+      <h2><span class="hub-badge">🎰</span> Slot Reviews</h2>
+      <p>In-depth reviews of popular slot games available at South African online casinos. We test every game and give you honest assessments of RTP, volatility, bonus features, and overall experience.</p>
+    </div>
+    <div class="hub-grid">
+
+      <div class="hub-card">
+        <div class="hub-card-header">
+          <div class="hub-card-meta">
+            <span class="card-tag">Review</span>
+            <h3>Gates of Olympus: Why SA Players Love This Slot</h3>
+            <span class="card-date">18 March 2026</span>
+          </div>
+        </div>
+        <div class="hub-card-body">
+          <p>Pragmatic Play's Gates of Olympus is the most played slot in South Africa. We break down the 96.5% RTP, extreme volatility, and the Zeus multiplier mechanic that can deliver up to 5,000x wins.</p>
+          <a href="slots/gates-of-olympus.html" class="hub-read-more">Read Review <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
         </div>
       </div>
-      <!-- 2 -->
-      <div class="card article-card">
-        <div class="card-img" style="background: linear-gradient(135deg, #2563eb, #22c55e); display: flex; align-items: center; justify-content: center; font-size: 3rem;">🎓</div>
-        <div class="card-body">
-          <span class="card-tag">Beginner Guide</span>
-          <h3 class="card-title article-text">How to Choose the Right Slot Game: A Beginner's Guide</h3>
-          <span class="card-date">7 March 2026</span>
-          <p class="card-excerpt">New to online slots? Learn how to pick games based on RTP, volatility, bonus features, and theme. Our step-by-step guide helps you find your perfect slot match.</p>
-          <a href="#" class="btn btn-teal btn-sm">Read More</a>
+
+      <div class="hub-card">
+        <div class="hub-card-header">
+          <div class="hub-card-meta">
+            <span class="card-tag">Review</span>
+            <h3>Sweet Bonanza: The Tumble Slot That Started It All</h3>
+            <span class="card-date">14 March 2026</span>
+          </div>
+        </div>
+        <div class="hub-card-body">
+          <p>Sweet Bonanza popularised the tumble mechanic for millions of players. With a 96.49% RTP and medium-high volatility, this candy-themed slot is as rewarding as it is visually appealing. Maximum win: 21,175x.</p>
+          <a href="slots/sweet-bonanza.html" class="hub-read-more">Read Review <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
         </div>
       </div>
-      <!-- 3 -->
-      <div class="card article-card">
-        <div class="card-img" style="background: linear-gradient(135deg, #ef4444, #2563eb); display: flex; align-items: center; justify-content: center; font-size: 3rem;">🏆</div>
-        <div class="card-body">
-          <span class="card-tag">Top Picks</span>
-          <h3 class="card-title article-text">Top 10 Highest RTP Slots Available in South Africa</h3>
-          <span class="card-date">4 March 2026</span>
-          <p class="card-excerpt">We've ranked the highest RTP slots you can play at SA online casinos. From Mega Joker at 99% to Blood Suckers at 98%, these games offer the best theoretical returns.</p>
-          <a href="#" class="btn btn-teal btn-sm">Read More</a>
+
+      <div class="hub-card">
+        <div class="hub-card-header">
+          <div class="hub-card-meta">
+            <span class="card-tag">Review</span>
+            <h3>Big Bass Bonanza: SA's Favourite Fishing Slot</h3>
+            <span class="card-date">10 March 2026</span>
+          </div>
+        </div>
+        <div class="hub-card-body">
+          <p>The Big Bass franchise has become a phenomenon in South Africa. We review the original Big Bass Bonanza with its 96.71% RTP, money collect feature, and fishing-themed free spins round.</p>
+          <a href="slots/big-bass-bonanza.html" class="hub-read-more">Read Review <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
         </div>
       </div>
-      <!-- 4 -->
-      <div class="card article-card">
-        <div class="card-img" style="background: linear-gradient(135deg, #0ea5e9, #1e3a5f); display: flex; align-items: center; justify-content: center; font-size: 3rem;">💰</div>
-        <div class="card-body">
-          <span class="card-tag">Strategy</span>
-          <h3 class="card-title article-text">Bankroll Management: How to Make Your Slots Budget Last</h3>
-          <span class="card-date">28 February 2026</span>
-          <p class="card-excerpt">Smart bankroll management is the key to enjoying slots responsibly. Learn proven strategies to extend your playing time and maximise your chances of walking away a winner.</p>
-          <a href="#" class="btn btn-teal btn-sm">Read More</a>
+
+      <div class="hub-card">
+        <div class="hub-card-header">
+          <div class="hub-card-meta">
+            <span class="card-tag">Review</span>
+            <h3>Top 10 Highest RTP Slots in South Africa</h3>
+            <span class="card-date">4 March 2026</span>
+          </div>
+        </div>
+        <div class="hub-card-body">
+          <p>We ranked the highest RTP slots available at SA online casinos. From Mega Joker at 99% to Blood Suckers at 98%, these games offer the best theoretical returns for players who want maximum value.</p>
+          <a href="#" class="hub-read-more">Read Article <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
         </div>
       </div>
-      <!-- 5 -->
-      <div class="card article-card">
-        <div class="card-img" style="background: linear-gradient(135deg, #1e4976, #0ea5e9); display: flex; align-items: center; justify-content: center; font-size: 3rem;">⚖️</div>
-        <div class="card-body">
-          <span class="card-tag">Regulation</span>
-          <h3 class="card-title article-text">New SA Gambling Regulations: What Players Need to Know in 2026</h3>
-          <span class="card-date">22 February 2026</span>
-          <p class="card-excerpt">South Africa's updated gambling framework introduces new player protection measures, deposit limits, and licensing requirements. Here's how the changes affect you.</p>
-          <a href="#" class="btn btn-teal btn-sm">Read More</a>
-        </div>
-      </div>
-      <!-- 6 -->
-      <div class="card article-card">
-        <div class="card-img" style="background: linear-gradient(135deg, #38bdf8, #2563eb); display: flex; align-items: center; justify-content: center; font-size: 3rem;">🎰</div>
-        <div class="card-body">
-          <span class="card-tag">Game Review</span>
-          <h3 class="card-title article-text">Gates of Olympus Review: Why SA Players Can't Stop Spinning</h3>
-          <span class="card-date">18 February 2026</span>
-          <p class="card-excerpt">An in-depth look at Pragmatic Play's Gates of Olympus - the most popular slot in South Africa. We break down the mechanics, RTP, volatility, and winning strategies.</p>
-          <a href="#" class="btn btn-teal btn-sm">Read More</a>
-        </div>
-      </div>
-      <!-- 7 -->
-      <div class="card article-card">
-        <div class="card-img" style="background: linear-gradient(135deg, #22c55e, #0f2744); display: flex; align-items: center; justify-content: center; font-size: 3rem;">📱</div>
-        <div class="card-body">
-          <span class="card-tag">Mobile</span>
-          <h3 class="card-title article-text">Best Mobile Slot Apps in South Africa for 2026</h3>
-          <span class="card-date">12 February 2026</span>
-          <p class="card-excerpt">Play slots on the go with these top-rated mobile casino apps available in SA. We compare Hollywoodbets, Betway, Jackpot City, and more for mobile slot gaming.</p>
-          <a href="#" class="btn btn-teal btn-sm">Read More</a>
-        </div>
-      </div>
-      <!-- 8 -->
-      <div class="card article-card">
-        <div class="card-img" style="background: linear-gradient(135deg, #0f2744, #ef4444); display: flex; align-items: center; justify-content: center; font-size: 3rem;">🛡️</div>
-        <div class="card-body">
-          <span class="card-tag">Safety</span>
-          <h3 class="card-title article-text">How to Spot a Fake Online Casino: Red Flags Every SA Player Must Know</h3>
-          <span class="card-date">5 February 2026</span>
-          <p class="card-excerpt">Protect yourself from rogue operators. Learn the warning signs of unlicensed casinos, fake bonuses, and rigged games so you only play at safe, regulated sites.</p>
-          <a href="#" class="btn btn-teal btn-sm">Read More</a>
-        </div>
-      </div>
+
     </div>
   </div>
 </section>
 
-<!-- ═══ WHAT WE COVER ═══ -->
-<section class="section section-alt">
+<!-- ═══ STRATEGY GUIDES HUB ═══ -->
+<section class="hub-section hub-strategy" id="strategy">
   <div class="container">
-    <div class="content-section">
-      <h2>What We Cover</h2>
-      <p>MzansiSlots News &amp; Guides is your go-to source for everything related to online slots in South Africa. Our team of experienced writers and industry insiders bring you content that matters.</p>
+    <div class="hub-header">
+      <h2><span class="hub-badge">🧠</span> Strategy Guides</h2>
+      <p>While slots are games of chance, smart decisions make a difference. Our guides cover bankroll management, understanding paytables, choosing the right volatility, and getting more value from casino bonuses.</p>
+    </div>
+    <div class="hub-grid">
 
-      <h3>Industry News</h3>
-      <p>Stay on top of the latest developments in South Africa's online gambling industry. From new casino launches and provider partnerships to regulatory changes and market trends, we cover the news that impacts your playing experience.</p>
+      <div class="hub-card">
+        <div class="hub-card-header">
+          <div class="hub-card-meta">
+            <span class="card-tag">Beginner Guide</span>
+            <h3>How to Choose the Right Slot Game</h3>
+            <span class="card-date">7 March 2026</span>
+          </div>
+        </div>
+        <div class="hub-card-body">
+          <p>New to online slots? Learn how to pick games based on RTP, volatility, bonus features, and theme. This step-by-step guide helps you find a slot game that matches your playing style and budget.</p>
+          <a href="#" class="hub-read-more">Read Guide <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
 
-      <h3>Game Reviews</h3>
-      <p>Our detailed slot reviews go beyond the surface. We analyse RTP rates, volatility levels, bonus mechanics, maximum win potential, and overall entertainment value to help you find the games worth your time and money.</p>
+      <div class="hub-card">
+        <div class="hub-card-header">
+          <div class="hub-card-meta">
+            <span class="card-tag">Strategy</span>
+            <h3>Bankroll Management: Make Your Budget Last</h3>
+            <span class="card-date">28 February 2026</span>
+          </div>
+        </div>
+        <div class="hub-card-body">
+          <p>Smart bankroll management is the key to enjoying slots responsibly. Learn proven strategies to extend your playing time, set session limits, and know when to walk away ahead.</p>
+          <a href="#" class="hub-read-more">Read Guide <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
 
-      <h3>Strategy Guides</h3>
-      <p>While slots are games of chance, smart play can make a difference. Our guides cover bankroll management, understanding paytables, choosing the right volatility for your style, and making the most of casino bonuses and promotions.</p>
+      <div class="hub-card">
+        <div class="hub-card-header">
+          <div class="hub-card-meta">
+            <span class="card-tag">Strategy</span>
+            <h3>Understanding Slot Volatility and RTP</h3>
+            <span class="card-date">20 February 2026</span>
+          </div>
+        </div>
+        <div class="hub-card-body">
+          <p>RTP and volatility are the two most important numbers in any slot game. Learn what they really mean, how they affect your experience, and which combination suits your playing style best.</p>
+          <a href="#" class="hub-read-more">Read Guide <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
 
-      <h3>Responsible Gambling</h3>
-      <p>We're committed to promoting safe, responsible gambling. Our articles provide tools and advice for setting limits, recognising problem gambling, and keeping your slots experience fun and healthy.</p>
+      <div class="hub-card">
+        <div class="hub-card-header">
+          <div class="hub-card-meta">
+            <span class="card-tag">Tips</span>
+            <h3>Best Mobile Slot Apps in South Africa for 2026</h3>
+            <span class="card-date">12 February 2026</span>
+          </div>
+        </div>
+        <div class="hub-card-body">
+          <p>Play slots on the go with the top-rated mobile casino apps in SA. We compare Hollywoodbets, Betway, Jackpot City, and more for mobile slot gaming, performance, and user experience.</p>
+          <a href="#" class="hub-read-more">Read Guide <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
 
-<!-- ═══ FAQ ═══ -->
-<section class="section">
+<!-- ═══ INDUSTRY NEWS HUB ═══ -->
+<section class="hub-section hub-news" id="industry">
   <div class="container">
-    <div class="section-header">
-      <h2>Frequently Asked Questions</h2>
-      <p>Questions about our news and guides content.</p>
+    <div class="hub-header">
+      <h2><span class="hub-badge">📰</span> Industry News</h2>
+      <p>The latest developments in South Africa's online gambling industry. New casino launches, provider partnerships, regulatory changes, and market trends that impact your playing experience.</p>
     </div>
-    <div class="faq-list">
-      <div class="faq-item">
-        <button class="faq-question">How often do you publish new articles?</button>
-        <div class="faq-answer">We publish new content several times a week, including game reviews, industry news, and strategy guides. Subscribe to our newsletter or check back regularly to stay up to date with the latest slot news from South Africa.</div>
+    <div class="hub-grid">
+
+      <div class="hub-card">
+        <div class="hub-card-header">
+          <div class="hub-card-meta">
+            <span class="card-tag">Market Report</span>
+            <h3>SA Online Gambling Market Grows 35% in 2025</h3>
+            <span class="card-date">10 March 2026</span>
+          </div>
+        </div>
+        <div class="hub-card-body">
+          <p>The South African online gambling industry saw record growth in 2025, driven by mobile adoption and platforms like Spina Zonke. Experts predict continued expansion through 2026 as more operators enter the market.</p>
+          <a href="#" class="hub-read-more">Read Article <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
       </div>
-      <div class="faq-item">
-        <button class="faq-question">Can I trust your game reviews?</button>
-        <div class="faq-answer">Absolutely. Our reviews are written by experienced players and industry professionals. We test every game ourselves and provide honest, unbiased assessments. While we may receive compensation from casino partners, this never influences our game reviews or ratings.</div>
+
+      <div class="hub-card">
+        <div class="hub-card-header">
+          <div class="hub-card-meta">
+            <span class="card-tag">Regulation</span>
+            <h3>New SA Gambling Regulations for 2026</h3>
+            <span class="card-date">22 February 2026</span>
+          </div>
+        </div>
+        <div class="hub-card-body">
+          <p>South Africa's updated gambling framework introduces new player protection measures, deposit limits, and licensing requirements. Here is a breakdown of what the changes mean for players and operators.</p>
+          <a href="#" class="hub-read-more">Read Article <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
       </div>
-      <div class="faq-item">
-        <button class="faq-question">Do you have tips for winning at slots?</button>
-        <div class="faq-answer">While no strategy can guarantee wins on slots (they use random number generators), our guides cover smart practices like choosing high-RTP games, managing your bankroll, understanding volatility, and maximising bonus offers. These can help you get more value from your play.</div>
+
+      <div class="hub-card">
+        <div class="hub-card-header">
+          <div class="hub-card-meta">
+            <span class="card-tag">Launch</span>
+            <h3>Pragmatic Play Expands SA Partnerships</h3>
+            <span class="card-date">15 February 2026</span>
+          </div>
+        </div>
+        <div class="hub-card-body">
+          <p>Pragmatic Play has signed new distribution agreements with three major South African operators. The deal brings their full portfolio including Sweet Bonanza and Gates of Olympus to even more SA players.</p>
+          <a href="#" class="hub-read-more">Read Article <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
       </div>
-      <div class="faq-item">
-        <button class="faq-question">Can I suggest a topic for an article?</button>
-        <div class="faq-answer">Yes! We welcome topic suggestions from our readers. If there's a slot game you'd like reviewed, a casino you want us to investigate, or a topic you'd like us to cover, reach out through our contact page and we'll consider it for future content.</div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ RESPONSIBLE GAMBLING HUB ═══ -->
+<section class="hub-section hub-responsible" id="responsible">
+  <div class="container">
+    <div class="hub-header">
+      <h2><span class="hub-badge">🛡️</span> Responsible Gambling</h2>
+      <p>We are committed to promoting safe, responsible gambling. These resources provide tools and advice for setting limits, recognising problem gambling, and keeping your experience enjoyable.</p>
+    </div>
+    <div class="hub-grid">
+
+      <div class="hub-card">
+        <div class="hub-card-header">
+          <div class="hub-card-meta">
+            <span class="card-tag">Safety</span>
+            <h3>How to Spot a Fake Online Casino</h3>
+            <span class="card-date">5 March 2026</span>
+          </div>
+        </div>
+        <div class="hub-card-body">
+          <p>Protect yourself from rogue operators. Learn the warning signs of unlicensed casinos, fake bonuses, and rigged games so you only play at safe, regulated South African sites.</p>
+          <a href="#" class="hub-read-more">Read Article <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
       </div>
+
+      <div class="hub-card">
+        <div class="hub-card-header">
+          <div class="hub-card-meta">
+            <span class="card-tag">Guide</span>
+            <h3>Setting Gambling Limits That Work</h3>
+            <span class="card-date">25 February 2026</span>
+          </div>
+        </div>
+        <div class="hub-card-body">
+          <p>Learn practical strategies for setting deposit, loss, and time limits. Most SA casinos offer built-in tools to help you stay in control. We show you how to activate and use them effectively.</p>
+          <a href="#" class="hub-read-more">Read Guide <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
+
+      <div class="hub-card">
+        <div class="hub-card-header">
+          <div class="hub-card-meta">
+            <span class="card-tag">Resources</span>
+            <h3>SA Gambling Support: Where to Get Help</h3>
+            <span class="card-date">18 February 2026</span>
+          </div>
+        </div>
+        <div class="hub-card-body">
+          <p>If gambling is no longer fun, help is available. The National Responsible Gambling Programme helpline is 0800 006 008. We list every support resource available to South African players.</p>
+          <a href="#" class="hub-read-more">Read Article <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Responsible Gambling Callout -->
+    <div style="margin-top: var(--space-10); padding: var(--space-6); background: rgba(245, 158, 11, 0.08); border: 1px solid rgba(245, 158, 11, 0.2); border-radius: var(--radius-lg); text-align: center;">
+      <p style="font-family: var(--font-display); font-weight: 700; font-size: var(--text-lg); color: var(--color-text); margin-bottom: var(--space-2);"><span class="age-badge" style="font-size: var(--text-sm); vertical-align: middle; margin-right: var(--space-2);">18+</span> Play Responsibly</p>
+      <p style="color: var(--color-text-muted); margin-bottom: var(--space-3); font-size: var(--text-sm);">National Responsible Gambling Programme helpline: <strong>0800 006 008</strong> | WhatsApp: <strong>076 675 0710</strong></p>
+      <a href="https://www.responsiblegambling.co.za" target="_blank" rel="noopener noreferrer" style="color: var(--color-accent); text-decoration: underline; font-size: var(--text-sm); font-weight: 600;">responsiblegambling.co.za</a>
     </div>
   </div>
 </section>
@@ -237,9 +535,12 @@
 <!-- ═══ CLOSING CTA ═══ -->
 <section class="closing-cta">
   <div class="container">
-    <h2>Never Miss a Beat</h2>
-    <p>Stay informed with the latest slot news, reviews, and expert guides from South Africa's trusted slots resource.</p>
-    <a href="best-slot-sites.html" class="btn btn-primary btn-lg">Explore Best Slot Sites</a>
+    <h2>Find Your Next Game</h2>
+    <p>Browse our full collection of free-to-play slot games or discover the best South African casino sites.</p>
+    <div style="display: flex; gap: var(--space-4); justify-content: center; flex-wrap: wrap;">
+      <a href="slot-games.html" class="btn btn-primary btn-lg">Browse Slot Games</a>
+      <a href="best-slot-sites.html" class="btn btn-lg" style="background: transparent; border: 2px solid white; color: white;">Best Slot Sites</a>
+    </div>
   </div>
 </section>
 
@@ -282,7 +583,14 @@
 <script src="hero-bg-inject.js"></script>
 <script src="shared.js"></script>
 <script>
-  initSearch('#news-search', '.article-card', '.article-text');
+// Smooth scroll for hub nav
+document.querySelectorAll('.hub-nav-btn').forEach(btn => {
+  btn.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
 </script>
 </body>
 </html>

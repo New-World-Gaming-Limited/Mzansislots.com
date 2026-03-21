@@ -279,6 +279,15 @@
     Object.entries(state.filters).forEach(([type, values]) => {
       values.forEach(v => allFilters.push({ type, value: v }));
     });
+
+    // Update accordion count badges
+    ['provider', 'theme', 'volatility', 'features'].forEach(function(type) {
+      var countEl = document.getElementById('count-' + type);
+      if (countEl) {
+        var c = state.filters[type] ? state.filters[type].length : 0;
+        countEl.textContent = c > 0 ? c + ' selected' : '';
+      }
+    });
     
     if (allFilters.length === 0 && !state.search) {
       activeFiltersWrap.style.display = 'none';

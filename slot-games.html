@@ -86,24 +86,48 @@
 <section class="sg-main">
   <div class="container">
 
-    <!-- Filter Bar -->
+    <!-- Filter Accordions -->
     <div class="sg-filters" id="sg-filters">
-      <div class="sg-filter-row">
-        <div class="sg-filter-group">
-          <label class="sg-filter-label">Provider</label>
-          <div class="sg-filter-chips" id="filter-providers"></div>
+      <div class="sg-filter-accordions">
+        <div class="sg-accordion" data-accordion="provider">
+          <button class="sg-accordion-trigger" aria-expanded="false">
+            <span class="sg-accordion-title">Provider</span>
+            <span class="sg-accordion-count" id="count-provider"></span>
+            <svg class="sg-accordion-arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="sg-accordion-panel" hidden>
+            <div class="sg-filter-chips" id="filter-providers"></div>
+          </div>
         </div>
-        <div class="sg-filter-group">
-          <label class="sg-filter-label">Theme</label>
-          <div class="sg-filter-chips" id="filter-themes"></div>
+        <div class="sg-accordion" data-accordion="theme">
+          <button class="sg-accordion-trigger" aria-expanded="false">
+            <span class="sg-accordion-title">Theme</span>
+            <span class="sg-accordion-count" id="count-theme"></span>
+            <svg class="sg-accordion-arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="sg-accordion-panel" hidden>
+            <div class="sg-filter-chips" id="filter-themes"></div>
+          </div>
         </div>
-        <div class="sg-filter-group">
-          <label class="sg-filter-label">Volatility</label>
-          <div class="sg-filter-chips" id="filter-volatility"></div>
+        <div class="sg-accordion" data-accordion="volatility">
+          <button class="sg-accordion-trigger" aria-expanded="false">
+            <span class="sg-accordion-title">Volatility</span>
+            <span class="sg-accordion-count" id="count-volatility"></span>
+            <svg class="sg-accordion-arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="sg-accordion-panel" hidden>
+            <div class="sg-filter-chips" id="filter-volatility"></div>
+          </div>
         </div>
-        <div class="sg-filter-group">
-          <label class="sg-filter-label">Features</label>
-          <div class="sg-filter-chips" id="filter-features"></div>
+        <div class="sg-accordion" data-accordion="features">
+          <button class="sg-accordion-trigger" aria-expanded="false">
+            <span class="sg-accordion-title">Features</span>
+            <span class="sg-accordion-count" id="count-features"></span>
+            <svg class="sg-accordion-arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="sg-accordion-panel" hidden>
+            <div class="sg-filter-chips" id="filter-features"></div>
+          </div>
         </div>
       </div>
       <div class="sg-active-filters" id="sg-active-filters" style="display:none;">
@@ -194,6 +218,25 @@
   </div>
 </footer>
 
+<script>
+// Accordion toggle for filter groups
+document.querySelectorAll('.sg-accordion-trigger').forEach(function(trigger) {
+  trigger.addEventListener('click', function() {
+    var accordion = this.closest('.sg-accordion');
+    var panel = accordion.querySelector('.sg-accordion-panel');
+    var isOpen = accordion.hasAttribute('data-open');
+    if (isOpen) {
+      accordion.removeAttribute('data-open');
+      panel.hidden = true;
+      this.setAttribute('aria-expanded', 'false');
+    } else {
+      accordion.setAttribute('data-open', '');
+      panel.hidden = false;
+      this.setAttribute('aria-expanded', 'true');
+    }
+  });
+});
+</script>
 <script src="play-counter.js"></script>
 <script src="games-data.js"></script>
 <script src="slot-games-app.js"></script>
