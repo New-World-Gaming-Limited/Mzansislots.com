@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mzansislots.com/sitemap.xml
+
+# MzansiSlots - South Africa's free slots guide
+# https://mzansislots.com
