@@ -131,6 +131,10 @@
           <span class="stat-value">5,000x</span>
         </div>
         <div class="stat-item"><span class="stat-label">Reels</span><span class="stat-value">5</span></div>
+        <div class="stat-item">
+          <span class="stat-label">Plays</span>
+          <span class="stat-value" id="playCountValue">-</span>
+        </div>
       </div>
     </div>
   </div>
@@ -472,8 +476,14 @@
 </footer>
 
 <script src="../hero-bg-inject.js"></script>
+<script src="../play-counter.js"></script>
 <script src="../shared.js"></script>
 <script>document.getElementById('launchDemo').addEventListener('click', function() {
+  if (window.MzansiPlayCounter) {
+    const newCount = MzansiPlayCounter.incrementCount('book-of-the-fallen');
+    const el = document.getElementById('playCountValue');
+    if (el) el.textContent = MzansiPlayCounter.formatCount(newCount) + ' plays';
+  }
   const iframe = document.getElementById('gameIframe');
   const placeholder = document.getElementById('demoPlaceholder');
   iframe.src = 'https://slotslaunch.com/iframe/5359?token=uTgDOO6eTBjzYawnyR1sRaMYyZ6ZJhOGRCzfqoq0W7NXhqiuQX';
@@ -488,5 +498,16 @@
   </div>
   <a href="https://www.mzansiwins.co.za/link/96a5aad0181116205024/" class="btn btn-primary btn-table" target="_blank" rel="noopener noreferrer">Play Now</a>
 </div>
+
+<script>
+(function() {
+  if (window.MzansiPlayCounter) {
+    var count = MzansiPlayCounter.getCount('book-of-the-fallen');
+    var el = document.getElementById('playCountValue');
+    if (el && count > 0) el.textContent = MzansiPlayCounter.formatCount(count) + ' plays';
+    else if (el) el.textContent = 'New';
+  }
+})();
+</script>
 </body>
 </html>

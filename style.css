@@ -759,7 +759,14 @@
 }
 .games-grid .game-tile-img {
   width: 100%;
-  height: 140px;
+  height: 160px;
+  overflow: hidden;
+  display: block;
+  background: var(--color-primary-surface);
+}
+.games-grid .game-tile-img img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   display: block;
 }
@@ -3144,6 +3151,31 @@ a.game-tag-link:active {
   font-size: 0.65rem;
   color: var(--color-text-faint);
   margin-top: 2px;
+}
+
+/* ── Play Count Badge (on card image) ── */
+.sg-card-play-badge {
+  position: absolute;
+  bottom: 6px;
+  right: 6px;
+  background: rgba(0, 0, 0, 0.72);
+  color: #fbbf24;
+  font-size: 0.6rem;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 10px;
+  letter-spacing: 0.02em;
+  line-height: 1.3;
+  pointer-events: none;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  white-space: nowrap;
+  z-index: 2;
+}
+
+/* ── Play Count (in card body, hidden duplicate - use badge instead) ── */
+.sg-card-plays {
+  display: none;
 }
 
 /* ── Flat Grid View ── */

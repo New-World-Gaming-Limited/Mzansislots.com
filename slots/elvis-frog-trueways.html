@@ -131,6 +131,11 @@
           <span class="stat-value">5,000x</span>
         </div>
         <div class="stat-item"><span class="stat-label">Reels</span><span class="stat-value">6</span></div>
+      
+        <div class="stat-item">
+          <span class="stat-label">Plays</span>
+          <span class="stat-value" id="playCountValue">-</span>
+        </div>
       </div>
     </div>
   </div>
@@ -404,6 +409,7 @@
 </footer>
 
 <script src="../hero-bg-inject.js"></script>
+<script src="../play-counter.js"></script>
 <script src="../shared.js"></script>
 
 
@@ -414,5 +420,16 @@
   </div>
   <a href="https://www.mzansiwins.co.za/link/96a5aad0181116205024/" class="btn btn-primary btn-table" target="_blank" rel="noopener noreferrer">Play Now</a>
 </div>
+
+<script>
+(function() {
+  if (window.MzansiPlayCounter) {
+    var count = MzansiPlayCounter.getCount('elvis-frog-trueways');
+    var el = document.getElementById('playCountValue');
+    if (el && count > 0) el.textContent = MzansiPlayCounter.formatCount(count) + ' plays';
+    else if (el) el.textContent = 'New';
+  }
+})();
+</script>
 </body>
 </html>

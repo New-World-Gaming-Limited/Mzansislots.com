@@ -137,6 +137,10 @@
           <span class="stat-label">Reels</span>
           <span class="stat-value">5</span>
         </div>
+        <div class="stat-item">
+          <span class="stat-label">Plays</span>
+          <span class="stat-value" id="playCountValue">-</span>
+        </div>
       </div>
     </div>
   </div>
@@ -500,10 +504,16 @@
 </footer>
 
 <script src="../hero-bg-inject.js"></script>
+<script src="../play-counter.js"></script>
 <script src="../shared.js"></script>
 <script>
 // Demo launch - instant play
 document.getElementById('launchDemo').addEventListener('click', function() {
+  if (window.MzansiPlayCounter) {
+    const newCount = MzansiPlayCounter.incrementCount('john-hunter-and-the-tomb-of-the-scarab-queen');
+    const el = document.getElementById('playCountValue');
+    if (el) el.textContent = MzansiPlayCounter.formatCount(newCount) + ' plays';
+  }
   const iframe = document.getElementById('gameIframe');
   const placeholder = document.getElementById('demoPlaceholder');
   iframe.src = 'https://slotslaunch.com/iframe/5424?token=uTgDOO6eTBjzYawnyR1sRaMYyZ6ZJhOGRCzfqoq0W7NXhqiuQX';
@@ -520,5 +530,16 @@ document.getElementById('launchDemo').addEventListener('click', function() {
   </div>
   <a href="https://www.mzansiwins.co.za/link/96a5aad0181116205024/" class="btn btn-primary btn-table" target="_blank" rel="noopener noreferrer">Play Now</a>
 </div>
+
+<script>
+(function() {
+  if (window.MzansiPlayCounter) {
+    var count = MzansiPlayCounter.getCount('john-hunter-and-the-tomb-of-the-scarab-queen');
+    var el = document.getElementById('playCountValue');
+    if (el && count > 0) el.textContent = MzansiPlayCounter.formatCount(count) + ' plays';
+    else if (el) el.textContent = 'New';
+  }
+})();
+</script>
 </body>
 </html>

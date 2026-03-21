@@ -131,6 +131,11 @@
           <span class="stat-value">5,000x</span>
         </div>
         <div class="stat-item"><span class="stat-label">Reels</span><span class="stat-value">5</span></div>
+      
+        <div class="stat-item">
+          <span class="stat-label">Plays</span>
+          <span class="stat-value" id="playCountValue">-</span>
+        </div>
       </div>
     </div>
   </div>
@@ -472,6 +477,7 @@
 </footer>
 
 <script src="../hero-bg-inject.js"></script>
+<script src="../play-counter.js"></script>
 <script src="../shared.js"></script>
 
 
@@ -491,6 +497,17 @@
     iframe.src = 'https://slotslaunch.com/iframe/27586?token=uTgDOO6eTBjzYawnyR1sRaMYyZ6ZJhOGRCzfqoq0W7NXhqiuQX';
     iframe.style.display = 'block';
   });
+</script>
+
+<script>
+(function() {
+  if (window.MzansiPlayCounter) {
+    var count = MzansiPlayCounter.getCount('lucky-tiger');
+    var el = document.getElementById('playCountValue');
+    if (el && count > 0) el.textContent = MzansiPlayCounter.formatCount(count) + ' plays';
+    else if (el) el.textContent = 'New';
+  }
+})();
 </script>
 </body>
 </html>

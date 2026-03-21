@@ -48,7 +48,7 @@
     const provContainer = document.getElementById('filter-providers');
     PROVIDERS_INFO.forEach(p => {
       if (p.count === 0) return;
-      const chip = createChip(p.name, 'provider', p.logo);
+      const chip = createChip(p.name, 'provider');
       provContainer.appendChild(chip);
     });
 
@@ -249,11 +249,18 @@
     const volClass = game.v ? 'sg-vol-' + game.v.toLowerCase().replace(/[\s-]/g, '') : '';
     const volHtml = game.v ? `<span class="sg-card-vol ${volClass}">${game.v}</span>` : '';
     
+    // Play count
+    const playCount = window.MzansiPlayCounter ? MzansiPlayCounter.getCount(game.s) : 0;
+    const playsHtml = playCount > 0 
+      ? `<span class="sg-card-plays">${MzansiPlayCounter.formatCount(playCount)} plays</span>` 
+      : '';
+    
     return `
       <a href="slots/${game.s}.html" class="sg-game-card">
         <div class="sg-card-img${game.img ? '' : ' sg-card-no-img'}">
           ${imgHtml}
           ${badges.length ? `<div class="sg-card-badges">${badges.join('')}</div>` : ''}
+          ${playCount > 0 ? `<div class="sg-card-play-badge">${MzansiPlayCounter.formatCount(playCount)} plays</div>` : ''}
         </div>
         <div class="sg-card-body">
           <h3>${game.t}</h3>
