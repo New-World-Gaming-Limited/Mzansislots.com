@@ -98,17 +98,6 @@
     "cta": "Claim",
     "promo": "BETS"
   },
-  "1xBet": {
-    "name": "1xBet",
-    "id": 305,
-    "logo": "https://www.imageservera.com/uploadedimages/201906/Jun12/ORG_1xbet logo1890_17014.svg",
-    "colour": "#1A5685",
-    "text_colour": "#ffffff",
-    "url": "https://www.mzansiwins.co.za/link/d6a163ef190612112956/",
-    "bonus": "1xbet South Africa",
-    "cta": "Claim",
-    "promo": "NEWBONUS"
-  },
   "JackpotCity": {
     "name": "Jackpot City",
     "id": 1713,
