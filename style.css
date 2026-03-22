@@ -2081,9 +2081,19 @@ a.game-tag-link:active {
   color: var(--color-text);
 }
 
+/* Stats Below Demo */
+.game-stats-below {
+  padding: var(--space-3) 0 0;
+}
+.game-stats-below .game-quick-stats {
+  max-width: 960px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
 /* Demo Section */
 .game-demo-section {
-  padding: var(--space-6) 0;
+  padding: var(--space-4) 0 var(--space-2);
 }
 .game-demo-wrapper {
   max-width: 960px;
@@ -4985,11 +4995,32 @@ img[loading="lazy"] {
   .game-quick-stats .stat-value {
     font-size: var(--text-sm);
   }
+  .game-demo-section {
+    padding: var(--space-2) 0 0;
+  }
   .game-demo-wrapper {
     margin: 0 calc(-1 * var(--space-4));
   }
   .game-demo-frame {
     border-radius: 0;
+  }
+  .game-stats-below {
+    padding: var(--space-2) var(--space-3) 0;
+  }
+  .game-stats-below .game-quick-stats {
+    padding: var(--space-2);
+    gap: 0;
+    flex-wrap: wrap;
+  }
+  .game-stats-below .stat-item {
+    flex: 1 0 30%;
+    padding: var(--space-1) var(--space-2);
+  }
+  .game-stats-below .stat-label {
+    font-size: 9px;
+  }
+  .game-stats-below .stat-value {
+    font-size: var(--text-sm);
   }
   /* Where to play cards - improve mobile UX */
   .where-to-play .casino-card {
