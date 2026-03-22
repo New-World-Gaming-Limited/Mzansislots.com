@@ -2610,10 +2610,10 @@ a.game-tag-link:active {
 
   /* ── Hero Sections ── */
   .hero {
-    min-height: 60vh;
+    min-height: 0;
   }
   .hero h1 {
-    font-size: var(--text-2xl);
+    font-size: var(--text-xl);
   }
   .hero p {
     font-size: var(--text-sm);
@@ -4863,25 +4863,43 @@ img[loading="lazy"] {
 /* ═══ HERO MOBILE OPTIMIZATION ═══ */
 @media (max-width: 768px) {
   .hero {
-    padding: var(--space-6) 0 var(--space-4);
+    padding: var(--space-4) 0 var(--space-3);
+    min-height: 0 !important;
   }
   .hero h1 {
-    font-size: var(--text-xl);
-    margin-bottom: var(--space-2);
+    font-size: var(--text-lg);
+    margin-bottom: var(--space-1);
+    line-height: 1.25;
   }
   .hero p {
-    font-size: var(--text-sm);
-    line-height: 1.5;
+    font-size: var(--text-xs);
+    line-height: 1.4;
+    margin-bottom: var(--space-2);
   }
   .hero-compact {
-    padding: var(--space-6) 0 var(--space-4) !important;
+    padding: var(--space-4) 0 var(--space-3) !important;
   }
   .hero-floats {
     display: none;
   }
-  .editorial-meta {
-    gap: var(--space-1);
+  /* Editorial meta inside hero - single line on mobile */
+  .hero .editorial-meta {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--space-1) var(--space-3);
+    font-size: 10px;
+    padding: var(--space-1) var(--space-3);
+    margin-top: var(--space-2);
+    border-radius: var(--radius-md);
+  }
+  .hero .editorial-meta-item {
+    gap: 3px;
+  }
+  /* Quick play link compact */
+  .hero .quick-play-link {
     font-size: var(--text-xs);
+    padding: var(--space-1) var(--space-3);
+    margin-top: var(--space-2);
   }
   .hero-stats {
     gap: var(--space-3) !important;
@@ -4891,33 +4909,54 @@ img[loading="lazy"] {
 
 /* ═══ GAME PAGE MOBILE POLISH ═══ */
 @media (max-width: 768px) {
+  /* Compact editorial meta bar on game pages */
+  body > .editorial-meta {
+    padding: var(--space-1) var(--space-3);
+    font-size: 10px;
+    gap: var(--space-1) var(--space-3);
+  }
+  body > .editorial-meta .editorial-meta-item {
+    gap: 3px;
+  }
+  .breadcrumb {
+    padding: var(--space-1) 0;
+    margin: 0;
+  }
   .game-page-header {
-    padding: var(--space-4) 0 var(--space-2);
+    padding: var(--space-2) 0 var(--space-1);
   }
   .game-header-tags {
     flex-wrap: wrap;
     gap: var(--space-1);
-    margin-bottom: var(--space-2);
+    margin-bottom: var(--space-1);
   }
   .game-feature-tag, .game-provider-tag {
     font-size: 10px;
-    padding: 3px 8px;
+    padding: 2px 6px;
   }
   .game-header-text h1 {
-    font-size: var(--text-lg);
-    margin-bottom: var(--space-1);
+    font-size: var(--text-base);
+    margin-bottom: 2px;
+    line-height: 1.3;
   }
   .game-header-sub {
-    font-size: var(--text-sm);
-    margin-bottom: var(--space-2);
+    font-size: var(--text-xs);
+    margin-bottom: var(--space-1);
   }
   .game-quick-stats {
     flex-wrap: wrap;
     gap: 0;
+    padding: var(--space-2);
   }
   .game-quick-stats .stat-item {
     flex: 1 0 30%;
-    padding: var(--space-2);
+    padding: var(--space-1) var(--space-2);
+  }
+  .game-quick-stats .stat-label {
+    font-size: 9px;
+  }
+  .game-quick-stats .stat-value {
+    font-size: var(--text-sm);
   }
   .game-demo-wrapper {
     margin: 0 calc(-1 * var(--space-4));
