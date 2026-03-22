@@ -219,10 +219,11 @@
 
   .nav-desktop a {
     display: block;
-    padding: var(--space-2) var(--space-3);
+    padding: var(--space-2) var(--space-2);
     color: #ffffff;
     text-decoration: none;
     font-family: var(--font-body);
+    white-space: nowrap;
     font-size: var(--text-sm);
     font-weight: 600;
     text-transform: uppercase;
@@ -2670,56 +2671,11 @@ a.game-tag-link:active {
   }
 }
 
-/* ═══════════════════════════════════════════════════════
-   STICKY MOBILE CTA - Game Pages
-   ═══════════════════════════════════════════════════════ */
-.sticky-mobile-cta {
-  display: none;
-}
 
 @media (max-width: 768px) {
-  .sticky-mobile-cta {
-    display: flex;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 90;
-    background: var(--color-surface);
-    border-top: 1px solid var(--color-border);
-    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
-    padding: var(--space-3) var(--space-4);
-    gap: var(--space-3);
-    align-items: center;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-  }
-  .sticky-mobile-cta .sticky-cta-info {
-    flex: 1;
-    min-width: 0;
-  }
-  .sticky-mobile-cta .sticky-cta-name {
-    font-family: var(--font-display);
-    font-weight: 700;
-    font-size: var(--text-sm);
-    color: var(--color-text);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  .sticky-mobile-cta .sticky-cta-sub {
-    font-size: var(--text-xs);
-    color: var(--color-text-faint);
-  }
-  .sticky-mobile-cta .btn {
-    flex-shrink: 0;
-    white-space: nowrap;
-  }
-  /* Add bottom padding to body so sticky CTA doesn't cover content */
-  body:has(.sticky-mobile-cta) {
-    padding-bottom: 72px;
-  }
+  /* empty - legacy block */
 }
+
 
 /* ═══════════════════════════════════════════════════════
    IMAGE CAROUSEL
@@ -4761,7 +4717,13 @@ img[loading="lazy"] {
   font-size: var(--text-xs);
   color: var(--color-text-muted);
   justify-content: flex-end;
-  max-width: 100%;
+  max-width: var(--content-wide);
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .editorial-meta {
+    padding: var(--space-2) var(--space-8);
+  }
 }
 .editorial-meta-item {
   display: flex;
@@ -4800,4 +4762,223 @@ img[loading="lazy"] {
 }
 .quick-play-link svg {
   flex-shrink: 0;
+}
+
+/* ═══ MOBILE RESPONSIVE TABLES ═══ */
+@media (max-width: 768px) {
+  .casino-table {
+    min-width: 0 !important;
+  }
+  .casino-table thead {
+    display: none;
+  }
+  .casino-table tbody tr {
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-4);
+    margin-bottom: var(--space-3);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+    background: var(--color-surface);
+  }
+  .casino-table tbody td {
+    padding: var(--space-2) 0;
+    border: none;
+  }
+  .casino-table tbody td:before {
+    display: block;
+    font-size: var(--text-xs);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-1);
+  }
+  .casino-name-cell {
+    min-width: 0;
+  }
+  .casino-table .btn-table,
+  .casino-table .btn-primary {
+    width: 100%;
+    text-align: center;
+    padding: var(--space-3);
+  }
+  .where-play-table .casino-card {
+    gap: var(--space-3);
+  }
+}
+
+/* Provider casino table mobile */
+@media (max-width: 768px) {
+  .prov-table {
+    min-width: 0 !important;
+  }
+  .prov-table thead {
+    display: none;
+  }
+  .prov-table tbody tr.prov-table-row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: var(--space-4);
+    gap: var(--space-2);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--space-2);
+    background: var(--color-surface);
+  }
+  .prov-table-casino {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+  }
+  .prov-table-bonus {
+    width: 100%;
+    max-width: none;
+    font-weight: 600;
+    padding: var(--space-1) 0 !important;
+  }
+  .prov-table-actions {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    white-space: normal;
+  }
+  .prov-table-actions .prov-cta-btn {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+  .prov-table-actions .prov-review-link {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+  .prov-terms-row td {
+    padding: var(--space-1) var(--space-4) !important;
+  }
+}
+
+/* ═══ HERO MOBILE OPTIMIZATION ═══ */
+@media (max-width: 768px) {
+  .hero {
+    padding: var(--space-6) 0 var(--space-4);
+  }
+  .hero h1 {
+    font-size: var(--text-xl);
+    margin-bottom: var(--space-2);
+  }
+  .hero p {
+    font-size: var(--text-sm);
+    line-height: 1.5;
+  }
+  .hero-compact {
+    padding: var(--space-6) 0 var(--space-4) !important;
+  }
+  .hero-floats {
+    display: none;
+  }
+  .editorial-meta {
+    gap: var(--space-1);
+    font-size: var(--text-xs);
+  }
+  .hero-stats {
+    gap: var(--space-3) !important;
+    margin-top: var(--space-2) !important;
+  }
+}
+
+/* ═══ GAME PAGE MOBILE POLISH ═══ */
+@media (max-width: 768px) {
+  .game-page-header {
+    padding: var(--space-4) 0 var(--space-2);
+  }
+  .game-header-tags {
+    flex-wrap: wrap;
+    gap: var(--space-1);
+    margin-bottom: var(--space-2);
+  }
+  .game-feature-tag, .game-provider-tag {
+    font-size: 10px;
+    padding: 3px 8px;
+  }
+  .game-header-text h1 {
+    font-size: var(--text-lg);
+    margin-bottom: var(--space-1);
+  }
+  .game-header-sub {
+    font-size: var(--text-sm);
+    margin-bottom: var(--space-2);
+  }
+  .game-quick-stats {
+    flex-wrap: wrap;
+    gap: 0;
+  }
+  .game-quick-stats .stat-item {
+    flex: 1 0 30%;
+    padding: var(--space-2);
+  }
+  .game-demo-wrapper {
+    margin: 0 calc(-1 * var(--space-4));
+  }
+  .game-demo-frame {
+    border-radius: 0;
+  }
+  /* Where to play cards - improve mobile UX */
+  .where-to-play .casino-card {
+    padding: var(--space-4);
+  }
+  .casino-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-2);
+  }
+  .casino-card .btn {
+    width: 100%;
+  }
+}
+
+/* ═══ TYPOGRAPHY MOBILE TIGHTENING ═══ */
+@media (max-width: 768px) {
+  h2 {
+    font-size: var(--text-lg);
+  }
+  h3 {
+    font-size: var(--text-base);
+  }
+  .content-section p {
+    font-size: var(--text-sm);
+    line-height: 1.6;
+  }
+  .container {
+    padding-left: var(--space-4);
+    padding-right: var(--space-4);
+  }
+  /* Footer mobile cleanup */
+  .footer-grid {
+    gap: var(--space-6);
+  }
+  .footer-links ul {
+    columns: 1;
+  }
+  .legal-disclaimer {
+    font-size: var(--text-xs);
+    padding: var(--space-3) var(--space-4);
+  }
+}
+
+/* ═══ PERFORMANCE ═══ */
+.site-header {
+  will-change: auto;
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .hero-floats {
+    display: none !important;
+  }
 }
