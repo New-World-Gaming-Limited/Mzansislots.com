@@ -1,0 +1,154 @@
+{
+  "TicTacBets": {
+    "review_slug": "tictacbets",
+    "mzw_review_url": "https://www.mzansiwins.co.za/tictacbets-review/",
+    "new_review_url_root": "reviews/tictacbets.html",
+    "new_review_url_slots": "../reviews/tictacbets.html",
+    "new_review_url_news": "../reviews/tictacbets.html",
+    "new_promo_url_root": "promo-codes/tictacbets.html"
+  },
+  "Easybet": {
+    "review_slug": "easybet",
+    "mzw_review_url": "https://www.mzansiwins.co.za/easybet-review/",
+    "new_review_url_root": "reviews/easybet.html",
+    "new_review_url_slots": "../reviews/easybet.html",
+    "new_review_url_news": "../reviews/easybet.html",
+    "new_promo_url_root": "promo-codes/easybet.html"
+  },
+  "Lucky Fish": {
+    "review_slug": "lucky-fish",
+    "mzw_review_url": "https://www.mzansiwins.co.za/luckyfish-review/",
+    "new_review_url_root": "reviews/lucky-fish.html",
+    "new_review_url_slots": "../reviews/lucky-fish.html",
+    "new_review_url_news": "../reviews/lucky-fish.html",
+    "new_promo_url_root": "promo-codes/lucky-fish.html"
+  },
+  "ZARbet": {
+    "review_slug": "zarbet",
+    "mzw_review_url": "https://www.mzansiwins.co.za/zarbet-review/",
+    "new_review_url_root": "reviews/zarbet.html",
+    "new_review_url_slots": "../reviews/zarbet.html",
+    "new_review_url_news": "../reviews/zarbet.html",
+    "new_promo_url_root": "promo-codes/zarbet.html"
+  },
+  "Hollywoodbets": {
+    "review_slug": "hollywoodbets",
+    "mzw_review_url": "https://www.mzansiwins.co.za/hollywoodbets-review/",
+    "new_review_url_root": "reviews/hollywoodbets.html",
+    "new_review_url_slots": "../reviews/hollywoodbets.html",
+    "new_review_url_news": "../reviews/hollywoodbets.html",
+    "new_promo_url_root": "promo-codes/hollywoodbets.html"
+  },
+  "Playbet": {
+    "review_slug": "playbet",
+    "mzw_review_url": "https://www.mzansiwins.co.za/playbet-review/",
+    "new_review_url_root": "reviews/playbet.html",
+    "new_review_url_slots": "../reviews/playbet.html",
+    "new_review_url_news": "../reviews/playbet.html",
+    "new_promo_url_root": "promo-codes/playbet.html"
+  },
+  "World Sports Betting": {
+    "review_slug": "world-sports-betting",
+    "mzw_review_url": "https://www.mzansiwins.co.za/world-sports-betting-review/",
+    "new_review_url_root": "reviews/world-sports-betting.html",
+    "new_review_url_slots": "../reviews/world-sports-betting.html",
+    "new_review_url_news": "../reviews/world-sports-betting.html",
+    "new_promo_url_root": "promo-codes/world-sports-betting.html"
+  },
+  "Betta Bets": {
+    "review_slug": "betta-bets",
+    "mzw_review_url": "https://www.mzansiwins.co.za/bettabets-review/",
+    "new_review_url_root": "reviews/betta-bets.html",
+    "new_review_url_slots": "../reviews/betta-bets.html",
+    "new_review_url_news": "../reviews/betta-bets.html",
+    "new_promo_url_root": "promo-codes/betta-bets.html"
+  },
+  "Betway": {
+    "review_slug": "betway",
+    "mzw_review_url": "https://www.mzansiwins.co.za/betway-review/",
+    "new_review_url_root": "reviews/betway.html",
+    "new_review_url_slots": "../reviews/betway.html",
+    "new_review_url_news": "../reviews/betway.html",
+    "new_promo_url_root": "promo-codes/betway.html"
+  },
+  "1xBet": {
+    "review_slug": "1xbet",
+    "mzw_review_url": "https://www.mzansiwins.co.za/1xbet-review/",
+    "new_review_url_root": "reviews/1xbet.html",
+    "new_review_url_slots": "../reviews/1xbet.html",
+    "new_review_url_news": "../reviews/1xbet.html",
+    "new_promo_url_root": "promo-codes/1xbet.html"
+  },
+  "JackpotCity": {
+    "review_slug": "jackpotcity",
+    "mzw_review_url": "https://www.mzansiwins.co.za/jackpotcity-review/",
+    "new_review_url_root": "reviews/jackpotcity.html",
+    "new_review_url_slots": "../reviews/jackpotcity.html",
+    "new_review_url_news": "../reviews/jackpotcity.html",
+    "new_promo_url_root": "promo-codes/jackpotcity.html"
+  },
+  "10bet": {
+    "review_slug": "10bet",
+    "mzw_review_url": "https://www.mzansiwins.co.za/10bet-review/",
+    "new_review_url_root": "reviews/10bet.html",
+    "new_review_url_slots": "../reviews/10bet.html",
+    "new_review_url_news": "../reviews/10bet.html",
+    "new_promo_url_root": "promo-codes/10bet.html"
+  },
+  "Wanejo Bets": {
+    "review_slug": "wanejo-bets",
+    "mzw_review_url": "https://www.mzansiwins.co.za/wanejo-bets-review/",
+    "new_review_url_root": "reviews/wanejo-bets.html",
+    "new_review_url_slots": "../reviews/wanejo-bets.html",
+    "new_review_url_news": "../reviews/wanejo-bets.html",
+    "new_promo_url_root": "promo-codes/wanejo-bets.html"
+  },
+  "BetXChange": {
+    "review_slug": "betxchange",
+    "mzw_review_url": "https://www.mzansiwins.co.za/betxchange-review/",
+    "new_review_url_root": "reviews/betxchange.html",
+    "new_review_url_slots": "../reviews/betxchange.html",
+    "new_review_url_news": "../reviews/betxchange.html",
+    "new_promo_url_root": "promo-codes/betxchange.html"
+  },
+  "SuperSportBet": {
+    "review_slug": "supersportbet",
+    "mzw_review_url": "https://www.mzansiwins.co.za/supersportbet-review/",
+    "new_review_url_root": "reviews/supersportbet.html",
+    "new_review_url_slots": "../reviews/supersportbet.html",
+    "new_review_url_news": "../reviews/supersportbet.html",
+    "new_promo_url_root": "promo-codes/supersportbet.html"
+  },
+  "Gbets": {
+    "review_slug": "gbets",
+    "mzw_review_url": "https://www.mzansiwins.co.za/gbets-review/",
+    "new_review_url_root": "reviews/gbets.html",
+    "new_review_url_slots": "../reviews/gbets.html",
+    "new_review_url_news": "../reviews/gbets.html",
+    "new_promo_url_root": "promo-codes/gbets.html"
+  },
+  "Supabets": {
+    "review_slug": "supabets",
+    "mzw_review_url": "https://www.mzansiwins.co.za/supabets-review/",
+    "new_review_url_root": "reviews/supabets.html",
+    "new_review_url_slots": "../reviews/supabets.html",
+    "new_review_url_news": "../reviews/supabets.html",
+    "new_promo_url_root": "promo-codes/supabets.html"
+  },
+  "Sportingbet": {
+    "review_slug": "sportingbet",
+    "mzw_review_url": "https://www.mzansiwins.co.za/sportingbet-review/",
+    "new_review_url_root": "reviews/sportingbet.html",
+    "new_review_url_slots": "../reviews/sportingbet.html",
+    "new_review_url_news": "../reviews/sportingbet.html",
+    "new_promo_url_root": "promo-codes/sportingbet.html"
+  },
+  "Betfred": {
+    "review_slug": "betfred",
+    "mzw_review_url": "https://www.mzansiwins.co.za/betfred-review/",
+    "new_review_url_root": "reviews/betfred.html",
+    "new_review_url_slots": "../reviews/betfred.html",
+    "new_review_url_news": "../reviews/betfred.html",
+    "new_promo_url_root": "promo-codes/betfred.html"
+  }
+}
