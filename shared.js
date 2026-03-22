@@ -25,18 +25,41 @@
   }
 })();
 
-// Mobile nav toggle
+// Slide menu toggle (hamburger on all viewports)
+(function(){
+  const btn = document.querySelector('.hamburger-toggle');
+  const menu = document.getElementById('slideMenu');
+  const overlay = document.getElementById('slideOverlay');
+  const closeBtn = menu ? menu.querySelector('.slide-menu-close') : null;
+  function openMenu() {
+    if (!menu) return;
+    menu.classList.add('open');
+    if (overlay) overlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    if (btn) btn.setAttribute('aria-expanded', 'true');
+  }
+  function closeMenu() {
+    if (!menu) return;
+    menu.classList.remove('open');
+    if (overlay) overlay.classList.remove('open');
+    document.body.style.overflow = '';
+    if (btn) btn.setAttribute('aria-expanded', 'false');
+  }
+  if (btn) btn.addEventListener('click', openMenu);
+  if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+  if (overlay) overlay.addEventListener('click', closeMenu);
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeMenu();
+  });
+})();
+
+// Legacy mobile nav toggle (fallback)
 (function(){
   const btn = document.querySelector('.mobile-toggle');
   const nav = document.querySelector('.mobile-nav');
   if (btn && nav) {
     btn.addEventListener('click', () => {
       nav.classList.toggle('open');
-      const isOpen = nav.classList.contains('open');
-      btn.setAttribute('aria-expanded', isOpen);
-      btn.innerHTML = isOpen
-        ? '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>'
-        : '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>';
     });
   }
 })();
@@ -130,7 +153,7 @@ function initBackToTop() {
 // Active nav link highlighting
 function initActiveNav() {
   const path = window.location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('.nav-desktop a, .mobile-nav a').forEach(link => {
+  document.querySelectorAll('.nav-desktop a, .slide-menu a, .mobile-nav a').forEach(link => {
     const href = link.getAttribute('href')?.split('/').pop() || '';
     if (href === path) {
       link.classList.add('nav-active');
