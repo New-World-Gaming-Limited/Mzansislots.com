@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
 <!--
-   ______                            __
-  / ____/___  ____ ___  ____  __  __/ /____  _____
- / /   / __ \/ __ `__ \/ __ \/ / / / __/ _ \/ ___/
-/ /___/ /_/ / / / / / / /_/ / /_/ / /_/  __/ /
+ ______ __
+ / ____/___ ____ ___ ____ __ __/ /____ _____
+ / / / __ \/ __ `__ \/ __ \/ / / / __/ _ \/ ___/
+/ /___/ /_/ / / / / / / /_/ / /_/ / /_/ __/ /
 \____/\____/_/ /_/ /_/ .___/\__,_/\__/\___/_/
-                    /_/
-        Created with Perplexity Computer
-        https://www.perplexity.ai/computer
+ /_/
+ Created with Perplexity Computer
+ https://www.perplexity.ai/computer
 -->
 <meta name="generator" content="Perplexity Computer">
 <meta name="author" content="Perplexity Computer">
@@ -42,380 +42,378 @@
 </script>
 <style>
 .review-hero {
-  background: #041467;
-  color: #ffffff;
-  padding: var(--space-10) 0 var(--space-8);
-  text-align: center;
+ background: #041467;
+ color: #ffffff;
+ padding: var(--space-10) 0 var(--space-8);
+ text-align: center;
 }
 .review-hero h1 {
-  font-family: var(--font-display);
-  font-size: var(--text-2xl);
-  font-weight: 800;
-  margin-bottom: var(--space-4);
+ font-family: var(--font-display);
+ font-size: var(--text-2xl);
+ font-weight: 800;
+ margin-bottom: var(--space-4);
 }
 .review-hero-logo {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(255,255,255,0.15);
-  border-radius: var(--radius-lg);
-  padding: var(--space-4) var(--space-6);
-  margin-bottom: var(--space-4);
-  min-height: 60px;
+ display: inline-flex;
+ align-items: center;
+ justify-content: center;
+ background: rgba(255,255,255,0.15);
+ border-radius: var(--radius-lg);
+ padding: var(--space-4) var(--space-6);
+ margin-bottom: var(--space-4);
+ min-height: 60px;
 }
 .review-hero-logo img {
-  height: 40px;
-  max-width: 180px;
-  object-fit: contain;
+ height: 40px;
+ max-width: 180px;
+ object-fit: contain;
 }
 .review-hero .bonus-highlight {
-  font-size: var(--text-lg);
-  opacity: 0.95;
-  margin-bottom: var(--space-4);
+ font-size: var(--text-lg);
+ opacity: 0.95;
+ margin-bottom: var(--space-4);
 }
 .review-hero .cta-btn {
-  display: inline-block;
-  padding: var(--space-3) var(--space-8);
-  background: #fff;
-  color: #041467;
-  font-weight: 700;
-  border-radius: var(--radius-full);
-  text-decoration: none;
-  font-size: var(--text-base);
-  transition: transform 0.2s, box-shadow 0.2s;
+ display: inline-block;
+ padding: var(--space-3) var(--space-8);
+ background: #fff;
+ color: #041467;
+ font-weight: 700;
+ border-radius: var(--radius-full);
+ text-decoration: none;
+ font-size: var(--text-base);
+ transition: transform 0.2s, box-shadow 0.2s;
 }
 .review-hero .cta-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+ transform: translateY(-2px);
+ box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 .review-content {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: var(--space-8) var(--space-4);
+ max-width: 800px;
+ margin: 0 auto;
+ padding: var(--space-8) var(--space-4);
 }
 .review-content h2 {
-  font-family: var(--font-display);
-  font-size: var(--text-xl);
-  font-weight: 800;
-  margin: var(--space-8) 0 var(--space-4);
-  padding-bottom: var(--space-2);
-  border-bottom: 2px solid var(--color-border);
+ font-family: var(--font-display);
+ font-size: var(--text-xl);
+ font-weight: 800;
+ margin: var(--space-8) 0 var(--space-4);
+ padding-bottom: var(--space-2);
+ border-bottom: 2px solid var(--color-border);
 }
 .review-content h3 {
-  font-family: var(--font-display);
-  font-size: var(--text-lg);
-  font-weight: 600;
-  margin: var(--space-6) 0 var(--space-3);
+ font-family: var(--font-display);
+ font-size: var(--text-lg);
+ font-weight: 600;
+ margin: var(--space-6) 0 var(--space-3);
 }
-.review-content p, .review-content li {
-  font-size: var(--text-base);
-  line-height: 1.7;
-  color: var(--color-text-secondary);
-  margin-bottom: var(--space-3);
+.review-content p.review-content li {
+ font-size: var(--text-base);
+ line-height: 1.7;
+ color: var(--color-text-secondary);
+ margin-bottom: var(--space-3);
 }
 .review-content ul {
-  padding-left: var(--space-5);
-  margin-bottom: var(--space-4);
+ padding-left: var(--space-5);
+ margin-bottom: var(--space-4);
 }
 .info-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: var(--space-4);
-  margin: var(--space-6) 0;
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+ gap: var(--space-4);
+ margin: var(--space-6) 0;
 }
 .info-card {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  padding: var(--space-5);
-  text-align: center;
+ background: var(--color-surface);
+ border: 1px solid var(--color-border);
+ border-radius: var(--radius-lg);
+ padding: var(--space-5);
+ text-align: center;
 }
 .info-card-label {
-  font-size: var(--text-xs);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--color-text-muted);
-  margin-bottom: var(--space-2);
+ font-size: var(--text-xs);
+ text-transform: uppercase;
+ letter-spacing: 0.05em;
+ color: var(--color-text-muted);
+ margin-bottom: var(--space-2);
 }
 .info-card-value {
-  font-family: var(--font-display);
-  font-size: var(--text-lg);
-  font-weight: 800;
-  color: var(--color-text);
+ font-family: var(--font-display);
+ font-size: var(--text-lg);
+ font-weight: 800;
+ color: var(--color-text);
 }
 .pros-cons {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-4);
-  margin: var(--space-6) 0;
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: var(--space-4);
+ margin: var(--space-6) 0;
 }
 @media (max-width: 600px) {
-  .pros-cons { grid-template-columns: 1fr; }
+ .pros-cons { grid-template-columns: 1fr; }
 }
-.pros-list, .cons-list {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  padding: var(--space-5);
+.pros-list.cons-list {
+ background: var(--color-surface);
+ border: 1px solid var(--color-border);
+ border-radius: var(--radius-lg);
+ padding: var(--space-5);
 }
 .pros-list h3 { color: #22c55e; margin-top: 0; }
 .cons-list h3 { color: #ef4444; margin-top: 0; }
-.pros-list li::marker { content: "\2713  "; color: #22c55e; }
-.cons-list li::marker { content: "\2717  "; color: #ef4444; }
 .cta-section {
-  background: var(--color-surface);
-  border: 2px solid #041467;
-  border-radius: var(--radius-lg);
-  padding: var(--space-6);
-  text-align: center;
-  margin: var(--space-8) 0;
+ background: var(--color-surface);
+ border: 2px solid #041467;
+ border-radius: var(--radius-lg);
+ padding: var(--space-6);
+ text-align: center;
+ margin: var(--space-8) 0;
 }
 .cta-section .cta-btn {
-  display: inline-block;
-  padding: var(--space-3) var(--space-8);
-  background: #041467;
-  color: #ffffff;
-  font-weight: 700;
-  border-radius: var(--radius-full);
-  text-decoration: none;
-  font-size: var(--text-base);
+ display: inline-block;
+ padding: var(--space-3) var(--space-8);
+ background: #041467;
+ color: #ffffff;
+ font-weight: 700;
+ border-radius: var(--radius-full);
+ text-decoration: none;
+ font-size: var(--text-base);
 }
 .promo-code-box {
-  display: inline-block;
-  background: var(--color-surface);
-  border: 2px dashed #041467;
-  border-radius: var(--radius-md);
-  padding: var(--space-2) var(--space-5);
-  font-family: var(--font-mono);
-  font-size: var(--text-lg);
-  font-weight: 800;
-  letter-spacing: 0.05em;
-  color: var(--color-text);
-  margin: var(--space-3) 0;
+ display: inline-block;
+ background: var(--color-surface);
+ border: 2px dashed #041467;
+ border-radius: var(--radius-md);
+ padding: var(--space-2) var(--space-5);
+ font-family: var(--font-mono);
+ font-size: var(--text-lg);
+ font-weight: 800;
+ letter-spacing: 0.05em;
+ color: var(--color-text);
+ margin: var(--space-3) 0;
 }
 .breadcrumb {
-  padding: var(--space-3) 0;
-  font-size: var(--text-sm);
-  color: var(--color-text-muted);
+ padding: var(--space-3) 0;
+ font-size: var(--text-sm);
+ color: var(--color-text-muted);
 }
 .breadcrumb a {
-  color: var(--color-text-muted);
-  text-decoration: none;
+ color: var(--color-text-muted);
+ text-decoration: none;
 }
 .breadcrumb a:hover {
-  color: var(--color-accent);
+ color: var(--color-accent);
 }
 </style>
 </head>
 <body>
 
 <header class="site-header">
-  <div class="container">
-    <div class="header-top">
-      <a href="../index.html" class="logo">
-        <svg class="ms-logo" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" aria-label="MzansiSlots"><rect width="36" height="36" rx="6" fill="#2956B2"/><text x="18" y="19" text-anchor="middle" font-family="'Arial Black',Impact,sans-serif" font-weight="900" font-size="18" fill="#fff">M</text><text x="18" y="33" text-anchor="middle" font-family="'Arial Black',Impact,sans-serif" font-weight="900" font-size="15" fill="#7DF9FF">S</text></svg>
-        MzansiSlots
-      </a>
-            <nav>
-        <ul class="nav-desktop">
-          <li><a href="../slot-games.html">Free Slots</a></li>
-          <li><a href="../best-slot-sites.html">Best Sites</a></li>
-          <li><a href="../reviews/index.html">Reviews</a></li>
-          <li><a href="../promo-codes/index.html">Promos</a></li>
-        </ul>
-      </nav>
-      <div class="header-actions">
-        <button class="theme-toggle" data-theme-toggle aria-label="Toggle dark/light mode">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-        </button>
-        <button class="hamburger-toggle" aria-label="Open menu" aria-expanded="false">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
-        </button>
-      </div>
-    </div>
-    <nav class="slide-menu" id="slideMenu">
-      <div class="slide-menu-header">
-        <span class="slide-menu-title">Menu</span>
-        <button class="slide-menu-close" aria-label="Close menu">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
-        </button>
-      </div>
-      <div class="slide-menu-section">
-        <span class="slide-menu-label">Browse</span>
-        <a href="../slot-games.html">Free Slots</a>
-        <a href="../best-slot-sites.html">Best Slots Sites</a>
-        <a href="../lekka-slots.html">Lekka Slots</a>
-        <a href="../spina-zonke.html">Spina Zonke</a>
-      </div>
-      <div class="slide-menu-section">
-        <span class="slide-menu-label">Game Studios</span>
-        <a href="../pragmatic-play.html">Pragmatic Play</a>
-        <a href="../play-n-go.html">Play'n GO</a>
-        <a href="../red-tiger-gaming.html">Red Tiger</a>
-        <a href="../hacksaw-gaming.html">Hacksaw Gaming</a>
-        <a href="../bgaming.html">BGaming</a>
-        <a href="../betsoft.html">Betsoft</a>
-        <a href="../booming-games.html">Booming Games</a>
-        <a href="../endorphina.html">Endorphina</a>
-        <a href="../habanero.html">Habanero</a>
-        <a href="../spinomenal.html">Spinomenal</a>
-        <a href="../wazdan.html">Wazdan</a>
-        <a href="../spribe.html">Spribe</a>
-        <a href="../amusnet.html">Amusnet</a>
-        <a href="../aviatrix.html">Aviatrix</a>
-      </div>
-      <div class="slide-menu-section">
-        <span class="slide-menu-label">Resources</span>
-        <a href="../reviews/index.html">Casino Reviews</a>
-        <a href="../promo-codes/index.html">Promo Codes</a>
-        <a href="../news.html">Guides</a>
-        <a href="../about.html">About</a>
-      </div>
-    </nav>
-    <div class="slide-menu-overlay" id="slideOverlay"></div>
-  </div>
+ <div class="container">
+ <div class="header-top">
+ <a href="../index.html" class="logo">
+ <svg class="ms-logo" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" aria-label="MzansiSlots"><rect width="36" height="36" rx="6" fill="#2956B2"/><text x="18" y="19" text-anchor="middle" font-family="'Arial Black',Impact,sans-serif" font-weight="900" font-size="18" fill="#fff">M</text><text x="18" y="33" text-anchor="middle" font-family="'Arial Black',Impact,sans-serif" font-weight="900" font-size="15" fill="#7DF9FF">S</text></svg>
+ MzansiSlots
+ </a>
+ <nav>
+ <ul class="nav-desktop">
+ <li><a href="../slot-games.html">Free Slots</a></li>
+ <li><a href="../best-slot-sites.html">Best Sites</a></li>
+ <li><a href="../reviews/index.html">Reviews</a></li>
+ <li><a href="../promo-codes/index.html">Promos</a></li>
+ </ul>
+ </nav>
+ <div class="header-actions">
+ <button class="theme-toggle" data-theme-toggle aria-label="Toggle dark/light mode">
+ <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+ </button>
+ <button class="hamburger-toggle" aria-label="Open menu" aria-expanded="false">
+ <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+ </button>
+ </div>
+ </div>
+ <nav class="slide-menu" id="slideMenu">
+ <div class="slide-menu-header">
+ <span class="slide-menu-title">Menu</span>
+ <button class="slide-menu-close" aria-label="Close menu">
+ <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+ </button>
+ </div>
+ <div class="slide-menu-section">
+ <span class="slide-menu-label">Browse</span>
+ <a href="../slot-games.html">Free Slots</a>
+ <a href="../best-slot-sites.html">Best Slots Sites</a>
+ <a href="../lekka-slots.html">Lekka Slots</a>
+ <a href="../spina-zonke.html">Spina Zonke</a>
+ </div>
+ <div class="slide-menu-section">
+ <span class="slide-menu-label">Game Studios</span>
+ <a href="../pragmatic-play.html">Pragmatic Play</a>
+ <a href="../play-n-go.html">Play'n GO</a>
+ <a href="../red-tiger-gaming.html">Red Tiger</a>
+ <a href="../hacksaw-gaming.html">Hacksaw Gaming</a>
+ <a href="../bgaming.html">BGaming</a>
+ <a href="../betsoft.html">Betsoft</a>
+ <a href="../booming-games.html">Booming Games</a>
+ <a href="../endorphina.html">Endorphina</a>
+ <a href="../habanero.html">Habanero</a>
+ <a href="../spinomenal.html">Spinomenal</a>
+ <a href="../wazdan.html">Wazdan</a>
+ <a href="../spribe.html">Spribe</a>
+ <a href="../amusnet.html">Amusnet</a>
+ <a href="../aviatrix.html">Aviatrix</a>
+ </div>
+ <div class="slide-menu-section">
+ <span class="slide-menu-label">Resources</span>
+ <a href="../reviews/index.html">Casino Reviews</a>
+ <a href="../promo-codes/index.html">Promo Codes</a>
+ <a href="../news.html">Guides</a>
+ <a href="../about.html">About</a>
+ </div>
+ </nav>
+ <div class="slide-menu-overlay" id="slideOverlay"></div>
+ </div>
 </header>
 
 <div class="container">
-  <div class="breadcrumb">
-    <a href="../index.html">Home</a> &rsaquo; <a href="index.html">Reviews</a> &rsaquo; World Sports Betting
-  </div>
+ <div class="breadcrumb">
+ <a href="../index.html">Home</a> &rsaquo; <a href="index.html">Reviews</a> &rsaquo; World Sports Betting
+ </div>
 </div>
 
 <section class="review-hero">
-  <div class="container">
-    <div class="review-hero-logo">
-      <img src="../assets/brands/worldsportsbetting.svg" alt="World Sports Betting" loading="lazy">
-    </div>
-    <h1>World Sports Betting Review South Africa 2026</h1>
-    <p class="bonus-highlight">100% first deposit match up to R20,000 for sports or casino (min deposit R50, 5x sports/30x casino wagering); 100 free spins no deposit (expire 72h, R50 wager to withdraw). Opt-in required, FICA verified accounts only.[Afrik-Foot Promo](https://www.afrik-foot.com/en-za/world-sports-betting-promo-code)</p>
-    <div class="promo-code-box">NEWBONUS</div>
-    <br><br>
-    <a href="https://www.mzansiwins.co.za/link/6f4efc2a190222151445/" target="_blank" rel="noopener noreferrer" class="cta-btn">Visit World Sports Betting</a>
-  </div>
+ <div class="container">
+ <div class="review-hero-logo">
+ <img src="../assets/brands/worldsportsbetting.svg" alt="World Sports Betting" loading="lazy">
+ </div>
+ <h1>World Sports Betting Review South Africa 2026</h1>
+ <p class="bonus-highlight">100% first deposit match up to R20,000 for sports or casino (min deposit R50, 5x sports/30x casino wagering); 100 free spins no deposit (expire 72h, R50 wager to withdraw). Opt-in required, FICA verified accounts only.</p>
+ <div class="promo-code-box">NEWBONUS</div>
+ <br><br>
+ <a href="https://www.mzansiwins.co.za/link/6f4efc2a190222151445/" target="_blank" rel="noopener noreferrer" class="cta-btn">Visit World Sports Betting</a>
+ </div>
 </section>
 
 <div class="review-content">
 
-  <div class="info-grid">
-    <div class="info-card">
-      <div class="info-card-label">Founded</div>
-      <div class="info-card-value">2002</div>
-    </div>
-    <div class="info-card">
-      <div class="info-card-label">Min Deposit</div>
-      <div class="info-card-value">R10 general (R50 for bank/credit card transfers and to trigger welcome bonus).[Afrik-Foot Promo](https://www.afrik-foot.com/en-za/world-sports-betting-promo-code), [Football Whispers](https://footballwhispers.com/blog/world-sports-betting-app-download/)</div>
-    </div>
-    <div class="info-card">
-      <div class="info-card-label">Promo Code</div>
-      <div class="info-card-value">NEWBONUS</div>
-    </div>
-    <div class="info-card">
-      <div class="info-card-label">Mobile App</div>
-      <div class="info-card-value">Yes</div>
-    </div>
-  </div>
+ <div class="info-grid">
+ <div class="info-card">
+ <div class="info-card-label">Founded</div>
+ <div class="info-card-value">2002</div>
+ </div>
+ <div class="info-card">
+ <div class="info-card-label">Min Deposit</div>
+ <div class="info-card-value">R10 general (R50 for bank/credit card transfers and to trigger welcome bonus). </div>
+ </div>
+ <div class="info-card">
+ <div class="info-card-label">Promo Code</div>
+ <div class="info-card-value">NEWBONUS</div>
+ </div>
+ <div class="info-card">
+ <div class="info-card-label">Mobile App</div>
+ <div class="info-card-value">Yes</div>
+ </div>
+ </div>
 
-  <h2>About World Sports Betting</h2>
-  <p>Established in 2002 by Warren Tannous as one of South Africa&#x27;s leading sportsbooks, offering online and retail betting on sports, casino games, horse racing, lotto. Employs over 1000 staff, launched online platform in 2009. Headquartered in Johannesburg, Gauteng.[LeadIQ](https://leadiq.com/c/world-sports-betting/5a1d98122300005e0086b15a), [App Store](https://apps.apple.com/za/app/world-sports-betting/id6477869697), [Official Site](https://www.worldsportsbetting.co.za)</p>
+ <h2>About World Sports Betting</h2>
+ <p>Established in 2002 by Warren Tannous as one of South Africa&#x27;s leading sportsbooks, offering online and retail betting on sports, casino games, horse racing, lotto. Employs over 1000 staff, launched online platform in 2009. Headquartered in Johannesburg, Gauteng. </p>
 
-  <h2>Licensing and Safety</h2>
-  <p>Licensed by Western Cape Gambling and Racing Board (License no. 10181495-013) and Mpumalanga Economic Regulator (License no. 9-2-1-09865). Also governed by Gauteng &amp; National Gambling Board. Operates under provincial licenses recognized nationwide for online sports betting.[Afrik-Foot Promo](https://www.afrik-foot.com/en-za/world-sports-betting-promo-code), [LeadIQ](https://leadiq.com/c/world-sports-betting/5a1d98122300005e0086b15a)</p>
-  <p>All licensed South African betting operators are regulated under the National Gambling Act. World Sports Betting holds a valid provincial gambling licence, which means your funds and personal data are protected by South African law. Players should always verify an operator's licensing status before depositing.</p>
+ <h2>Licensing and Safety</h2>
+ <p>Licensed by Western Cape Gambling and Racing Board (License no. 10181495-013) and Mpumalanga Economic Regulator (License no. 9-2-1-09865). Also governed by Gauteng &amp; National Gambling Board. Operates under provincial licenses recognized nationwide for online sports betting. </p>
+ <p>All licensed South African betting operators are regulated under the National Gambling Act. World Sports Betting holds a valid provincial gambling licence, which means your funds and personal data are protected by South African law. Players should always verify an operator's licensing status before depositing.</p>
 
-  <h2>Welcome Bonus and Promotions</h2>
-  <p>100% first deposit match up to R20,000 for sports or casino (min deposit R50, 5x sports/30x casino wagering); 100 free spins no deposit (expire 72h, R50 wager to withdraw). Opt-in required, FICA verified accounts only.[Afrik-Foot Promo](https://www.afrik-foot.com/en-za/world-sports-betting-promo-code)</p>
-  <p>To claim the World Sports Betting welcome bonus, use promo code <strong>NEWBONUS</strong> during registration or at the cashier. 18+ only. T&amp;Cs apply. Winners know when to stop.</p>
-  <p>Looking for the latest World Sports Betting promo codes? Visit our dedicated <a href="../promo-codes/world-sports-betting.html">World Sports Betting promo codes page</a> for the most up-to-date offers and bonus codes.</p>
+ <h2>Welcome Bonus and Promotions</h2>
+ <p>100% first deposit match up to R20,000 for sports or casino (min deposit R50, 5x sports/30x casino wagering); 100 free spins no deposit (expire 72h, R50 wager to withdraw). Opt-in required, FICA verified accounts only.</p>
+ <p>To claim the World Sports Betting welcome bonus, use promo code <strong>NEWBONUS</strong> during registration or at the cashier. 18+ only. T&amp;Cs apply. Winners know when to stop.</p>
+ <p>Looking for the latest World Sports Betting promo codes? Visit our dedicated <a href="../promo-codes/world-sports-betting.html">World Sports Betting promo codes page</a> for the most up-to-date offers and bonus codes.</p>
 
-  <h2>Available Slots and Casino Games</h2>
-  <p>World Sports Betting offers a wide selection of slot games and casino entertainment powered by leading software providers:</p>
-  <p>Pragmatic Play, Evolution, Red Tiger, NetEnt, No Limit City, Habanero. Over 500 slots including Gates of Olympus, Starlight Princess, Gonzo’s Quest Megaways.[Official Site](https://www.worldsportsbetting.co.za)</p>
-  <p>The platform features popular titles across categories including video slots, classic slots, progressive jackpots, live dealer games, and crash games like Aviator. South African favourites like Spina Zonke titles are typically available.</p>
+ <h2>Available Slots and Casino Games</h2>
+ <p>World Sports Betting offers a wide selection of slot games and casino entertainment powered by leading software providers:</p>
+ <p>Pragmatic Play, Evolution, Red Tiger, NetEnt, No Limit City, Habanero. Over 500 slots including Gates of Olympus, Starlight Princess, Gonzo’s Quest Megaways.</p>
+ <p>The platform features popular titles across categories including video slots, classic slots, progressive jackpots, live dealer games, and crash games like Aviator. South African favourites like Spina Zonke titles are typically available.</p>
 
-  <h2>Payment Methods</h2>
-  <p>World Sports Betting supports a range of deposit and withdrawal methods popular with South African players:</p>
-  <p>Deposits: Credit/Debit cards, EFT, Ozow (Instant EFT), SID, Direct Deposits, WSB/Blu/OTT/Flash vouchers, banks (ABSA, FNB, Capitec, Nedbank, Standard Bank, Investec), Skrill, Neteller. Withdrawals: FNB E-wallet, EFT, Instant Money, ABSA Cash Send (min R50, max R5000 except EFT). FICA required for withdrawals.[Official Site](https://www.worldsportsbetting.co.za), [Ghanasoccernet Withdrawals](https://ghanasoccernet.com/za/wiki/world-sports-betting-withdrawal/)</p>
-  <p>All transactions are processed in South African Rand (ZAR), so you will not incur currency conversion fees. Deposits are typically instant, while withdrawals may take 1-3 business days depending on the method chosen.</p>
+ <h2>Payment Methods</h2>
+ <p>World Sports Betting supports a range of deposit and withdrawal methods popular with South African players:</p>
+ <p>Deposits: Credit/Debit cards, EFT, Ozow (Instant EFT), SID, Direct Deposits, WSB/Blu/OTT/Flash vouchers, banks (ABSA, FNB, Capitec, Nedbank, Standard Bank, Investec), Skrill, Neteller. Withdrawals: FNB E-wallet, EFT, Instant Money, ABSA Cash Send (min R50, max R5000 except EFT). FICA required for withdrawals. </p>
+ <p>All transactions are processed in South African Rand (ZAR), so you will not incur currency conversion fees. Deposits are typically instant, while withdrawals may take 1-3 business days depending on the method chosen.</p>
 
-  <h2>Mobile Experience</h2>
-  <p>Available: iOS app on App Store (iOS 15.6+); Android APK download from official site (Android 4.4+ or 10.0+, not on Google Play); Huawei AppGallery. Data-free mobile site available.[App Store](https://apps.apple.com/za/app/world-sports-betting/id6477869697), [Football Whispers](https://footballwhispers.com/blog/world-sports-betting-app-download/), [Afrik-Foot App](https://www.afrik-foot.com/en-za/world-sports-betting-app)</p>
-  <p>The World Sports Betting platform is fully optimised for mobile devices, allowing you to play slots, place bets, and manage your account from any smartphone or tablet browser.</p>
+ <h2>Mobile Experience</h2>
+ <p>Available: iOS app on App Store (iOS 15.6+); Android APK download from official site (Android 4.4+ or 10.0+, not on Google Play); Huawei AppGallery. Data-free mobile site available. </p>
+ <p>The World Sports Betting platform is fully optimised for mobile devices, allowing you to play slots, place bets, and manage your account from any smartphone or tablet browser.</p>
 
-  <h2>Customer Support</h2>
-  <p>Toll-free phone: 0860 103 393; Direct: +27 11 326 3633 / +27 11 326 2621; WhatsApp: +27 61 898 3035; Live chat on site/app; Email: support@wsb.co.za (general/FICA), payments@wsb.co.za, promotions@wsb.co.za, complaints@wsb.co.za. 24/7 availability.[Official Site](https://www.worldsportsbetting.co.za), [Ghanasoccernet Contact](https://ghanasoccernet.com/za/wiki/world-sports-betting-contact-details/)</p>
+ <h2>Customer Support</h2>
+ <p>Toll-free phone: 0860 103 393; Direct: +27 11 326 3633 / +27 11 326 2621; WhatsApp: +27 61 898 3035; Live chat on site/app; Email: support@wsb.co.za (general/FICA), payments@wsb.co.za, promotions@wsb.co.za, complaints@wsb.co.za. 24/7 availability. </p>
 
-  <h2>Key Features</h2>
-  <p>Live streaming (sports/racing), in-play betting, Betgames (Poker, Lucky numbers, Dice Duel), Crash games (Aviator), extensive sports/horse racing markets, Blackjack/Roulette tables, data-free mobile access, request-a-bet, push notifications on app.[Official Site](https://www.worldsportsbetting.co.za), [Football Whispers](https://footballwhispers.com/blog/world-sports-betting-app-download/)</p>
+ <h2>Key Features</h2>
+ <p>Live streaming (sports/racing), in-play betting, Betgames (Poker, Lucky numbers, Dice Duel), Crash games (Aviator), extensive sports/horse racing markets, Blackjack/Roulette tables, data-free mobile access, request-a-bet, push notifications on app. </p>
 
-  <div class="pros-cons">
-    <div class="pros-list">
-      <h3>Pros</h3>
-      <ul>
-        <li>Competitive odds</li>
-        <li>wide sports/casino selection</li>
-        <li>live streaming</li>
-        <li>multiple payment options</li>
-        <li>generous welcome bonus</li>
-        <li>licensed/regulated</li>
-      </ul>
-    </div>
-    <div class="cons-list">
-      <h3>Cons</h3>
-      <ul>
-        <li>App performance lag/UI issues (low ratings 1.9/5 on App Store)</li>
-        <li>no Google Play for Android (APK only)</li>
-        <li>mixed reviews on withdrawals/verification delays</li>
-        <li>some account closure complaints.[App Store Reviews](https://apps.apple.com/za/app/world-sports-betting/id6477869697)</li>
-        <li>[Trustpilot](https://www.trustpilot.com/review/www.worldsportsbetting.co.za)</li>
-      </ul>
-    </div>
-  </div>
+ <div class="pros-cons">
+ <div class="pros-list">
+ <h3>Pros</h3>
+ <ul>
+ <li>Competitive odds</li>
+ <li>wide sports/casino selection</li>
+ <li>live streaming</li>
+ <li>multiple payment options</li>
+ <li>generous welcome bonus</li>
+ <li>licensed/regulated</li>
+ </ul>
+ </div>
+ <div class="cons-list">
+ <h3>Cons</h3>
+ <ul>
+ <li>App performance lag/UI issues (low ratings 1.9/5 on App Store)</li>
+ <li>no Google Play for Android (APK only)</li>
+ <li>mixed reviews on withdrawals/verification delays</li>
+ <li>some account closure complaints.</li>
+ <li></li>
+ </ul>
+ </div>
+ </div>
 
-  <div class="cta-section">
-    <h3>Ready to Play at World Sports Betting?</h3>
-    <p>Use promo code <strong>NEWBONUS</strong> to claim your welcome bonus.</p>
-    <a href="https://www.mzansiwins.co.za/link/6f4efc2a190222151445/" target="_blank" rel="noopener noreferrer" class="cta-btn">Visit World Sports Betting</a>
-    <p style="font-size: var(--text-xs); color: var(--color-text-muted); margin-top: var(--space-3);">18+ only. T&amp;Cs apply. Winners know when to stop.</p>
-  </div>
+ <div class="cta-section">
+ <h3>Ready to Play at World Sports Betting?</h3>
+ <p>Use promo code <strong>NEWBONUS</strong> to claim your welcome bonus.</p>
+ <a href="https://www.mzansiwins.co.za/link/6f4efc2a190222151445/" target="_blank" rel="noopener noreferrer" class="cta-btn">Visit World Sports Betting</a>
+ <p style="font-size: var(--text-xs); color: var(--color-text-muted); margin-top: var(--space-3);">18+ only. T&amp;Cs apply. Winners know when to stop.</p>
+ </div>
 
-  <p><strong>Gambling Disclaimer:</strong> Online gambling in South Africa is regulated under the National Gambling Act. Sports betting is legal through provincially licensed bookmakers. 18+ only. Gambling can be addictive. National Responsible Gambling Programme helpline: <strong>0800 006 008</strong>.</p>
+ <p><strong>Gambling Disclaimer:</strong> Online gambling in South Africa is regulated under the National Gambling Act. Sports betting is legal through provincially licensed bookmakers. 18+ only. Gambling can be addictive. National Responsible Gambling Programme helpline: <strong>0800 006 008</strong>.</p>
 
 </div>
 
 <footer class="site-footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <a href="../index.html" class="logo">
-          <svg class="ms-logo" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" aria-label="MzansiSlots"><rect width="36" height="36" rx="6" fill="#2956B2"/><text x="18" y="19" text-anchor="middle" font-family="'Arial Black',Impact,sans-serif" font-weight="900" font-size="18" fill="#fff">M</text><text x="18" y="33" text-anchor="middle" font-family="'Arial Black',Impact,sans-serif" font-weight="900" font-size="15" fill="#7DF9FF">S</text></svg>
-          MzansiSlots
-        </a>
-        <p>South Africa's trusted guide to online slots and casino sites. We review, compare, and rank the best platforms so you can play safely and confidently.</p>
-      </div>
-      <div class="footer-links">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="../about.html">About MzansiSlots</a></li>
-          <li><a href="../about.html">Privacy Policy</a></li>
-          <li><a href="../about.html">Terms of Use</a></li>
-          <li><a href="../sitemap.xml">Sitemap</a></li>
-        </ul>
-      </div>
-      <div class="footer-responsible">
-        <h4>Responsible Gambling</h4>
-        <p><span class="age-badge">18+</span> Gambling is for adults only. Play responsibly.</p>
-        <p>National Responsible Gambling Programme helpline: <strong>0800 006 008</strong></p>
-        <p>WhatsApp: <strong>076 675 0710</strong></p>
-        <p><a href="https://www.responsiblegambling.co.za" target="_blank" rel="noopener noreferrer" style="color: var(--color-accent); text-decoration: underline;">responsiblegambling.co.za</a></p>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>&copy; 2026 mzansislots.com All rights reserved.</span>
-      <a href="https://www.perplexity.ai/computer" target="_blank" rel="noopener noreferrer">Created with Perplexity Computer</a>
-    </div>
-    <p class="footer-disclaimer">MzansiSlots is an independent review and comparison site. We may receive compensation from the casino sites we feature, but this does not influence our reviews or rankings. Always gamble responsibly.</p>
-  </div>
+ <div class="container">
+ <div class="footer-grid">
+ <div class="footer-brand">
+ <a href="../index.html" class="logo">
+ <svg class="ms-logo" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" aria-label="MzansiSlots"><rect width="36" height="36" rx="6" fill="#2956B2"/><text x="18" y="19" text-anchor="middle" font-family="'Arial Black',Impact,sans-serif" font-weight="900" font-size="18" fill="#fff">M</text><text x="18" y="33" text-anchor="middle" font-family="'Arial Black',Impact,sans-serif" font-weight="900" font-size="15" fill="#7DF9FF">S</text></svg>
+ MzansiSlots
+ </a>
+ <p>South Africa's trusted guide to online slots and casino sites. We review, compare, and rank the best platforms so you can play safely and confidently.</p>
+ </div>
+ <div class="footer-links">
+ <h4>Quick Links</h4>
+ <ul>
+ <li><a href="../about.html">About MzansiSlots</a></li>
+ <li><a href="../about.html">Privacy Policy</a></li>
+ <li><a href="../about.html">Terms of Use</a></li>
+ <li><a href="../sitemap.xml">Sitemap</a></li>
+ </ul>
+ </div>
+ <div class="footer-responsible">
+ <h4>Responsible Gambling</h4>
+ <p><span class="age-badge">18+</span> Gambling is for adults only. Play responsibly.</p>
+ <p>National Responsible Gambling Programme helpline: <strong>0800 006 008</strong></p>
+ <p>WhatsApp: <strong>076 675 0710</strong></p>
+ <p><a href="https://www.responsiblegambling.co.za" target="_blank" rel="noopener noreferrer" style="color: var(--color-accent); text-decoration: underline;">responsiblegambling.co.za</a></p>
+ </div>
+ </div>
+ <div class="footer-bottom">
+ <span>&copy; 2026 mzansislots.com All rights reserved.</span>
+ <a href="https://www.perplexity.ai/computer" target="_blank" rel="noopener noreferrer">Created with Perplexity Computer</a>
+ </div>
+ <p class="footer-disclaimer">MzansiSlots is an independent review and comparison site. We may receive compensation from the casino sites we feature, but this does not influence our reviews or rankings. Always gamble responsibly.</p>
+ </div>
 </footer>
 
 <script src="../hero-bg-inject.js"></script>
