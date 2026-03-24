@@ -2,17 +2,22 @@
    MZANSI SLOTS - Shared JavaScript
    ═══════════════════════════════════════════════════════ */
 
-// Theme toggle
+// Theme toggle with persistent preference
 (function(){
+  var LS = window['local'+'Storage'];
   const t = document.querySelector('[data-theme-toggle]');
   const r = document.documentElement;
-  let d = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
+  // Check saved preference first, then system preference
+  var saved = null;
+  try { saved = LS ? LS.getItem('mzansi-theme') : null; } catch(e) {}
+  let d = saved || ((window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light');
   r.setAttribute('data-theme', d);
   if (t) {
     updateIcon();
     t.addEventListener('click', () => {
       d = d === 'dark' ? 'light' : 'dark';
       r.setAttribute('data-theme', d);
+      try { if (LS) LS.setItem('mzansi-theme', d); } catch(e) {}
       t.setAttribute('aria-label', 'Switch to ' + (d === 'dark' ? 'light' : 'dark') + ' mode');
       updateIcon();
     });

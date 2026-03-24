@@ -571,6 +571,56 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.7;
 }
 
+/* Hero badge */
+.hero-badge {
+  display: inline-block;
+  padding: 4px 14px;
+  border-radius: var(--radius-sm);
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.25);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-bottom: var(--space-4);
+  backdrop-filter: blur(8px);
+}
+
+/* Hero stats row */
+.hero-stats-row {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-6);
+  margin: var(--space-6) auto var(--space-2);
+  max-width: 600px;
+}
+.hero-stat {
+  text-align: center;
+}
+.hero-stat strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.2;
+}
+.hero-stat span {
+  font-size: 0.65rem;
+  color: rgba(255,255,255,0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+}
+@media (max-width: 480px) {
+  .hero-stats-row {
+    gap: var(--space-3);
+  }
+  .hero-stat strong {
+    font-size: var(--text-base);
+  }
+}
+
 /* ── Slot Machine Reels Background ── */
 .hero-reels {
   position: absolute;
@@ -1602,16 +1652,28 @@ h1, h2, h3, h4, h5, h6 {
   padding: var(--space-12) 0 var(--space-6);
 }
 
-.footer-grid {
+/* Mega footer grid */
+.footer-mega {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-6);
-  margin-bottom: var(--space-6);
+  margin-bottom: var(--space-8);
 }
 
 @media (min-width: 768px) {
-  .footer-grid {
-    grid-template-columns: 2fr 1fr 1fr;
+  .footer-mega {
+    grid-template-columns: 2fr repeat(5, 1fr);
+    gap: var(--space-5);
+  }
+}
+
+@media (max-width: 767px) {
+  .footer-mega {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+  }
+  .footer-brand {
+    grid-column: 1 / -1;
   }
 }
 
@@ -1623,35 +1685,62 @@ h1, h2, h3, h4, h5, h6 {
 .footer-brand p {
   font-size: var(--text-sm);
   line-height: 1.7;
-  max-width: 380px;
+  max-width: 320px;
 }
 
-.footer-links h4,
-.footer-responsible h4 {
+.footer-col h4, .footer-responsible h4 {
   color: #93c5fd;
   font-family: var(--font-display);
-  font-size: var(--text-sm);
-  margin-bottom: var(--space-4);
+  font-size: 0.7rem;
+  margin-bottom: var(--space-3);
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
 }
 
-.footer-links ul {
+.footer-col ul {
   list-style: none;
   padding: 0;
 }
 
-.footer-links a {
+.footer-col a {
   color: rgba(255, 255, 255, 0.7);
   text-decoration: none;
-  font-size: var(--text-sm);
+  font-size: var(--text-xs);
   display: block;
-  padding: var(--space-1) 0;
+  padding: 3px 0;
+  transition: color 150ms;
 }
 
-.footer-links a:hover {
-  color: var(--color-accent);
+.footer-col a:hover {
+  color: #fff;
 }
+
+.footer-responsible-bar {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding: var(--space-5) 0;
+  margin-bottom: var(--space-4);
+}
+.footer-responsible-bar .footer-responsible {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+.footer-responsible-bar .footer-responsible p {
+  font-size: var(--text-xs);
+  line-height: 1.6;
+  margin: 0;
+}
+.footer-responsible-bar .footer-responsible a {
+  color: #93c5fd;
+  text-decoration: underline;
+}
+
+/* Legacy support */
+.footer-grid { display: none; }
+.footer-links h4 { color: #93c5fd; font-family: var(--font-display); font-size: var(--text-sm); margin-bottom: var(--space-4); text-transform: uppercase; letter-spacing: 0.05em; }
+.footer-links ul { list-style: none; padding: 0; }
+.footer-links a { color: rgba(255, 255, 255, 0.7); text-decoration: none; font-size: var(--text-sm); display: block; padding: var(--space-1) 0; }
+.footer-links a:hover { color: var(--color-accent); }
 
 .age-badge {
   display: inline-flex;
