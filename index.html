@@ -64,6 +64,9 @@
         </ul>
       </nav>
       <div class="header-actions">
+        <button class="search-toggle" id="searchToggle" aria-label="Search">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+        </button>
         <button class="theme-toggle" data-theme-toggle aria-label="Toggle dark/light mode">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
         </button>
@@ -126,7 +129,7 @@
     <span class="hero-float">7️⃣</span>
   </div>
   <div class="container hero-content">
-    <div class="hero-badge">UPDATED MARCH 2026</div>
+    <div class="hero-badge">UPDATED APRIL 2026</div>
     <h1><span>Play Free Slots</span> in South Africa</h1>
     <p>168 free slot demos, 18 reviewed operators, and 15 expert guides. No download, no registration, no risk.</p>
     <div class="hero-stats-row">
@@ -535,6 +538,7 @@
           <li><a href="news/megaways-slots-explained.html">Megaways Explained</a></li>
           <li><a href="news/bankroll-management.html">Bankroll Management</a></li>
           <li><a href="news/free-slots-vs-real-money.html">Free vs Real Money</a></li>
+          <li><a href="calculators/wagering.html">Wagering Calculator</a></li>
           <li><a href="news.html">All Guides</a></li>
         </ul>
       </div>
@@ -567,5 +571,17 @@
 <script src="hero-bg-inject.js" defer></script>
 <script src="play-counter.js" defer></script>
 <script src="shared.js" defer></script>
+<div class="search-overlay" id="searchOverlay">
+  <div class="search-box">
+    <div class="search-input-wrap">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+      <input type="text" id="searchInput" placeholder="Search games, reviews, guides..." autocomplete="off">
+      <span class="search-kbd">ESC</span>
+    </div>
+    <div id="searchResults"></div>
+  </div>
+</div>
+<script src="search-data.js" defer></script>
+<script src="search-ui.js" defer></script>
 </body>
 </html>

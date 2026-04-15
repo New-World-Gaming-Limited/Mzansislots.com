@@ -87,6 +87,9 @@
         </ul>
       </nav>
       <div class="header-actions">
+        <button class="search-toggle" id="searchToggle" aria-label="Search">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+        </button>
         <button class="theme-toggle" data-theme-toggle aria-label="Toggle dark/light mode">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
         </button>
@@ -244,7 +247,7 @@
               </td>
               <td>
                 <strong class="bonus-text">Free R50 + 150% Match to R1,500</strong>
-                <div class="promo-code">Code: MAXBONUS</div>
+                <div class="promo-code">Code:  NEWBONUS</div>
                 <div class="table-terms">18+. T&Cs apply. </div>
               </td>
               <td class="features-cell">
@@ -267,7 +270,7 @@
               </td>
               <td>
                 <strong class="bonus-text">Welcome Bonus Available</strong>
-                <div class="promo-code">Code: MAXBONUS</div>
+                <div class="promo-code">Code:  NEWBONUS</div>
                 <div class="table-terms">18+. T&Cs apply. The betXchange promo code is BETS. </div>
               </td>
               <td class="features-cell">
@@ -289,7 +292,7 @@
               </td>
               <td>
                 <strong class="bonus-text">R50 Sign Up Bonus</strong>
-                <div class="promo-code">Code: MAXBONUS</div>
+                <div class="promo-code">Code:  BETS</div>
                 <div class="table-terms">The playbet.co.za promo code is NEWBONUS. 18+. T&Cs apply. </div>
               </td>
               <td class="features-cell">
@@ -493,5 +496,17 @@
   }
 })();
 </script>
+<div class="search-overlay" id="searchOverlay">
+  <div class="search-box">
+    <div class="search-input-wrap">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+      <input type="text" id="searchInput" placeholder="Search games, reviews, guides..." autocomplete="off">
+      <span class="search-kbd">ESC</span>
+    </div>
+    <div id="searchResults"></div>
+  </div>
+</div>
+<script src="../search-data.js" defer></script>
+<script src="../search-ui.js" defer></script>
 </body>
 </html>
